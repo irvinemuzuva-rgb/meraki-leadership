@@ -3,404 +3,597 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meraki Leadership — Irvine Muzuva | Participatory Leadership & Facilitation Zimbabwe</title>
-
-<!-- Google Search Console Verification -->
-<meta name="google-site-verification" content="xYW_gpl_crve6Ky_PVBacTzZtan-kZfu9Vi-5VIVsjQ" />
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="Meraki Leadership — Irvine Muzuva is a participatory leadership facilitator, graphic recorder and system change practitioner based in Zimbabwe, working with NGOs, corporates and communities globally.">
-<meta name="keywords" content="participatory leadership, facilitation, Zimbabwe, Africa, NGO facilitation, system change, Art of Hosting, Theory U, graphic recording, strategic planning, collective intelligence, Meraki Leadership">
-<meta name="author" content="Irvine Muzuva">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph (for WhatsApp, Facebook, LinkedIn previews) -->
-<meta property="og:title" content="Meraki Leadership — Irvine Muzuva">
-<meta property="og:description" content="Designing and hosting multi-stakeholder processes for collective transformation. Participatory leadership facilitator based in Zimbabwe, working globally.">
-<meta property="og:url" content="https://meraki-leadership.netlify.app">
-<meta property="og:type" content="website">
-
-<!-- Twitter/X Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meraki Leadership — Irvine Muzuva">
-<meta name="twitter:description" content="Participatory leadership facilitator, graphic recorder & system change practitioner. Zimbabwe & global.">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TR30FPGB7N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TR30FPGB7N');
-</script>
+<title>Meraki Leadership — Irvine Muzuva</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+/* ═══════════════════════════════════════
+   COLOUR PALETTE — from your palettes
+   Forest: #13130A, #2F321D, #535539, #908E81
+   Ocean:  #1A5C5C, #4A7F8C, #5BAAB8, #A8C8D0
+   Autumn: #713A12, #A05820, #C86A29, #DD8040
+═══════════════════════════════════════ */
 :root {
-  --forest-deep:  #13130A;
-  --forest-mid:   #2F321D;
-  --forest-soft:  #535539;
-  --forest-warm:  #908E81;
-  --ocean-deep:   #1A5C5C;
-  --ocean-mid:    #4A7F8C;
-  --ocean-light:  #5BAAB8;
-  --ocean-mist:   #A8C8D0;
-  --autumn-deep:  #713A12;
-  --autumn-mid:   #A05820;
-  --autumn-light: #C86A29;
-  --autumn-sand:  #DD8040;
-  --cream:        #F6F3EC;
-  --parchment:    #EDE8DC;
-  --linen:        #F9F7F2;
-  --ink:          #1C1C18;
-  --pride-red:    #E40303;
-  --pride-orange: #FF8C00;
-  --pride-yellow: #FFED00;
-  --pride-green:  #008026;
-  --pride-blue:   #004DFF;
-  --pride-violet: #750787;
+  /* Forest greens */
+  --forest-deep:   #13130A;
+  --forest-mid:    #2F321D;
+  --forest-soft:   #535539;
+  --forest-warm:   #908E81;
+  /* Ocean teals */
+  --ocean-deep:    #1A5C5C;
+  --ocean-mid:     #4A7F8C;
+  --ocean-light:   #5BAAB8;
+  --ocean-mist:    #A8C8D0;
+  /* Autumn earth */
+  --autumn-deep:   #713A12;
+  --autumn-mid:    #A05820;
+  --autumn-light:  #C86A29;
+  --autumn-sand:   #DD8040;
+  /* Neutrals */
+  --cream:         #F6F3EC;
+  --parchment:     #EDE8DC;
+  --linen:         #F9F7F2;
+  --ink:           #1C1C18;
+  --mist:          rgba(246,243,236,0.07);
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.7;cursor:none}
 
-/* ── GRAIN ── */
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");pointer-events:none;z-index:9000}
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+html { scroll-behavior: smooth; }
 
-/* ── AMBIENT SOUND TOGGLE ── */
-#sound-btn{position:fixed;bottom:2rem;right:2rem;z-index:8000;width:48px;height:48px;border-radius:50%;background:var(--ocean-deep);border:none;color:var(--cream);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(26,92,92,.4);transition:transform .2s,box-shadow .2s}
-#sound-btn:hover{transform:scale(1.1);box-shadow:0 6px 22px rgba(26,92,92,.5)}
-#sound-btn .ripple-ring{position:absolute;width:100%;height:100%;border-radius:50%;border:2px solid var(--ocean-light);animation:soundPulse 2s ease-out infinite;opacity:0}
-#sound-btn.playing .ripple-ring{opacity:1}
-@keyframes soundPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.2);opacity:0}}
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
 
-/* ── CUSTOM CURSOR ── */
-#cur{width:10px;height:10px;background:var(--autumn-light);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:transform .12s,background .3s}
-#curR{width:36px;height:36px;border:1.5px solid var(--forest-soft);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.4;transition:width .3s,height .3s,border-color .3s}
+/* Grain texture */
+body::after {
+  content:''; position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9000;
+}
+
+/* ── CURSOR ── */
+#cur  { width:9px; height:9px; background:var(--autumn-light); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); mix-blend-mode:multiply; transition:transform .1s; }
+#curR { width:34px; height:34px; border:1.5px solid var(--forest-soft); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); opacity:.4; transition:width .3s,height .3s; }
 
 /* ── NAV ── */
-nav{position:fixed;top:0;width:100%;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:1.3rem 4rem;background:linear-gradient(to bottom,rgba(246,243,236,.97) 60%,transparent);backdrop-filter:blur(8px)}
-.nav-brand{display:flex;flex-direction:column;line-height:1}
-.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;letter-spacing:.06em;color:var(--forest-mid);text-transform:uppercase}
-.nav-brand-sub{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--autumn-mid);font-weight:500;margin-top:.15rem}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--forest-mid);text-decoration:none;opacity:.65;transition:opacity .25s,color .25s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--ocean-deep);transition:width .3s}
-.nav-links a:hover{opacity:1;color:var(--ocean-deep)}
-.nav-links a:hover::after{width:100%}
-
-/* ── SVG RIPPLE BACKGROUND ── */
-.ripple-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:.07}
-.ripple-bg svg{width:100%;height:100%}
-.ripple-circle{fill:none;stroke:var(--ocean-deep);stroke-width:1}
-.r1{animation:rippleExpand 8s ease-out infinite}
-.r2{animation:rippleExpand 8s ease-out infinite;animation-delay:-2.6s}
-.r3{animation:rippleExpand 8s ease-out infinite;animation-delay:-5.3s}
-@keyframes rippleExpand{0%{r:20;opacity:.8}100%{r:320;opacity:0}}
-
-/* ── PEBBLE MOTIF SVG ── */
-.pebble-bg{position:absolute;bottom:0;right:0;width:300px;opacity:.06;pointer-events:none}
+nav {
+  position:fixed; top:0; width:100%; z-index:800;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1.4rem 4rem;
+  background:linear-gradient(to bottom, rgba(246,243,236,.97) 60%, transparent);
+  backdrop-filter:blur(6px);
+}
+.nav-brand { display:flex; flex-direction:column; line-height:1; }
+.nav-brand-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem; font-weight:600; letter-spacing:.06em;
+  color:var(--forest-mid);
+  text-transform:uppercase;
+}
+.nav-brand-sub {
+  font-size:.62rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--autumn-mid); font-weight:500; margin-top:.15rem;
+}
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a {
+  font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--forest-mid); text-decoration:none; opacity:.65;
+  transition:opacity .25s, color .25s;
+}
+.nav-links a:hover { opacity:1; color:var(--ocean-deep); }
 
 /* ── HERO ── */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 4rem 4rem;gap:4rem;position:relative;overflow:hidden;background:linear-gradient(150deg,var(--linen) 50%,#e8e3d8 100%)}
-.shape{position:absolute;border-radius:50%;filter:blur(85px);opacity:.15;animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
-.s1{width:550px;height:550px;background:var(--forest-soft);top:-15%;right:-5%;animation-delay:0s}
-.s2{width:380px;height:380px;background:var(--ocean-mid);bottom:-5%;left:-8%;animation-delay:-7s}
-.s3{width:260px;height:260px;background:var(--autumn-light);top:35%;left:42%;animation-delay:-12s;opacity:.09}
-@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(24px,32px) scale(1.1)}}
+#hero {
+  min-height:100vh;
+  display:grid; grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:8rem 4rem 4rem;
+  gap:4rem;
+  position:relative; overflow:hidden;
+  background:linear-gradient(150deg, var(--linen) 50%, #e8e3d8 100%);
+}
 
-/* Spinning ring */
-.hero-ring{position:absolute;right:3%;top:50%;transform:translateY(-50%);width:420px;height:420px;border-radius:50%;border:1px solid rgba(47,50,29,.09);animation:spin 50s linear infinite}
-.hero-ring::before{content:'';position:absolute;inset:35px;border-radius:50%;border:1px solid rgba(26,92,92,.1)}
-.hero-ring::after{content:'';position:absolute;inset:80px;border-radius:50%;border:1px dashed rgba(200,106,41,.14)}
-@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+/* Animated shapes using YOUR palette */
+.shape { position:absolute; border-radius:50%; filter:blur(80px); opacity:.15; animation:drift 16s ease-in-out infinite alternate; pointer-events:none; }
+.s1 { width:550px; height:550px; background:var(--forest-soft); top:-15%; right:-5%; animation-delay:0s; }
+.s2 { width:380px; height:380px; background:var(--ocean-mid); bottom:-5%; left:-8%; animation-delay:-6s; }
+.s3 { width:280px; height:280px; background:var(--autumn-light); top:30%; left:40%; animation-delay:-10s; opacity:.1; }
+@keyframes drift { from{transform:translate(0,0) scale(1)} to{transform:translate(22px,30px) scale(1.09)} }
 
-.hero-content{position:relative;z-index:2}
-.hero-eyebrow{display:flex;align-items:center;gap:.8rem;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ocean-deep);font-weight:500;margin-bottom:1.8rem;animation:fadeUp .9s ease both}
-.hero-eyebrow::before{content:'';width:2.2rem;height:1px;background:var(--ocean-deep)}
+/* Slowly spinning ring */
+.hero-ring {
+  position:absolute; right:3%; top:50%; transform:translateY(-50%);
+  width:440px; height:440px; border-radius:50%;
+  border:1px solid rgba(47,50,29,.1);
+  animation:spin 45s linear infinite;
+}
+.hero-ring::before { content:''; position:absolute; inset:35px; border-radius:50%; border:1px solid rgba(26,92,92,.1); }
+.hero-ring::after  { content:''; position:absolute; inset:80px; border-radius:50%; border:1px dashed rgba(200,106,41,.15); }
+@keyframes spin { to { transform:translateY(-50%) rotate(360deg); } }
 
-/* ANIMATED HEADLINE - letters stagger in */
-.animated-headline{overflow:hidden}
-.animated-headline .word{display:inline-block;overflow:hidden;margin-right:.25em}
-.animated-headline .letter{display:inline-block;animation:letterDrop .6s cubic-bezier(.23,1,.32,1) both}
+.hero-content { position:relative; z-index:2; }
+.hero-eyebrow {
+  display:flex; align-items:center; gap:.8rem;
+  font-size:.68rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ocean-deep); font-weight:500; margin-bottom:1.8rem;
+  animation:fadeUp .9s ease both;
+}
+.hero-eyebrow::before { content:''; width:2.2rem; height:1px; background:var(--ocean-deep); }
 
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:300;line-height:1.06;letter-spacing:-.02em;color:var(--forest-deep);margin-bottom:1.6rem}
-h1 em{font-style:italic;color:var(--ocean-deep)}
-h1 strong{font-weight:600;color:var(--forest-mid)}
+h1 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,6vw,5.5rem);
+  font-weight:300; line-height:1.05; letter-spacing:-.02em;
+  color:var(--forest-deep); margin-bottom:1.6rem;
+  animation:fadeUp .9s .1s ease both;
+}
+h1 em   { font-style:italic; color:var(--ocean-deep); }
+h1 strong { font-weight:600; color:var(--forest-mid); }
 
-@keyframes letterDrop{from{opacity:0;transform:translateY(60px) rotate(4deg)}to{opacity:1;transform:none}}
+.hero-mission {
+  font-size:1.05rem; line-height:1.9; color:var(--forest-mid);
+  opacity:.82; max-width:520px; margin-bottom:2.5rem;
+  animation:fadeUp 1s .2s ease both; font-weight:300;
+}
 
-.hero-mission{font-size:1.05rem;line-height:1.9;color:var(--forest-mid);opacity:.82;max-width:520px;margin-bottom:2.5rem;animation:fadeUp 1s .5s ease both;font-weight:300}
+/* MERAKI definition card */
+.meraki-card {
+  background:rgba(83,85,57,.06);
+  border:1px solid rgba(83,85,57,.15);
+  border-left:3px solid var(--autumn-mid);
+  border-radius:2px;
+  padding:1.2rem 1.5rem;
+  margin-bottom:2.5rem;
+  max-width:480px;
+  animation:fadeUp 1s .3s ease both;
+}
+.meraki-word {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem; font-weight:600; color:var(--forest-deep);
+  display:flex; align-items:baseline; gap:.6rem;
+}
+.meraki-phonetic { font-size:.75rem; font-weight:300; color:var(--forest-soft); font-style:italic; }
+.meraki-def { font-size:.85rem; line-height:1.7; color:var(--forest-mid); opacity:.78; margin-top:.6rem; }
+.meraki-def strong { color:var(--autumn-deep); font-weight:500; }
 
-.meraki-card{background:rgba(83,85,57,.06);border:1px solid rgba(83,85,57,.14);border-left:3px solid var(--autumn-mid);border-radius:2px;padding:1.2rem 1.5rem;margin-bottom:2.5rem;max-width:480px;animation:fadeUp 1s .6s ease both;transition:transform .3s,box-shadow .3s}
-.meraki-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(83,85,57,.1)}
-.meraki-word{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--forest-deep);display:flex;align-items:baseline;gap:.6rem}
-.meraki-phonetic{font-size:.75rem;font-weight:300;color:var(--forest-soft);font-style:italic}
-.meraki-def{font-size:.85rem;line-height:1.7;color:var(--forest-mid);opacity:.78;margin-top:.6rem}
-.meraki-def strong{color:var(--autumn-deep);font-weight:500}
+.hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 1s .4s ease both; }
+.btn-forest {
+  background:var(--forest-mid); color:var(--cream);
+  padding:.85rem 2rem; border-radius:2px;
+  font-size:.75rem; letter-spacing:.13em; text-transform:uppercase;
+  text-decoration:none; font-weight:500;
+  transition:background .25s, transform .2s, box-shadow .25s;
+}
+.btn-forest:hover { background:var(--forest-deep); transform:translateY(-2px); box-shadow:0 8px 24px rgba(19,19,10,.2); }
+.btn-ocean {
+  border:1.5px solid var(--ocean-deep); color:var(--ocean-deep);
+  padding:.85rem 2rem; border-radius:2px;
+  font-size:.75rem; letter-spacing:.13em; text-transform:uppercase;
+  text-decoration:none; font-weight:500;
+  transition:background .25s, color .25s;
+}
+.btn-ocean:hover { background:var(--ocean-deep); color:var(--cream); }
 
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 1s .7s ease both}
-.btn-forest{background:var(--forest-mid);color:var(--cream);padding:.85rem 2rem;border-radius:2px;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .25s,transform .2s,box-shadow .25s;position:relative;overflow:hidden}
-.btn-forest::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);transform:translateX(-100%);transition:transform .4s}
-.btn-forest:hover::after{transform:translateX(0)}
-.btn-forest:hover{background:var(--forest-deep);transform:translateY(-2px);box-shadow:0 8px 24px rgba(19,19,10,.22)}
-.btn-ocean{border:1.5px solid var(--ocean-deep);color:var(--ocean-deep);padding:.85rem 2rem;border-radius:2px;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .25s,color .25s,transform .2s}
-.btn-ocean:hover{background:var(--ocean-deep);color:var(--cream);transform:translateY(-2px)}
+/* Hero photo side */
+.hero-photo-side { position:relative; z-index:2; display:flex; justify-content:center; align-items:center; }
+.photo-frame {
+  position:relative; width:340px; height:400px;
+}
+.photo-frame::before {
+  content:''; position:absolute; top:-12px; left:-12px; right:12px; bottom:12px;
+  border:1px solid var(--ocean-mist); border-radius:2px; z-index:0;
+}
+.photo-frame::after {
+  content:''; position:absolute; top:12px; left:12px; right:-12px; bottom:-12px;
+  border:1px solid rgba(200,106,41,.3); border-radius:2px; z-index:0;
+}
+.photo-frame img {
+  width:100%; height:100%; object-fit:cover; border-radius:2px;
+  position:relative; z-index:1; filter:grayscale(20%);
+  transition:filter .4s;
+}
+.photo-frame img:hover { filter:grayscale(0%); }
 
-/* Photo */
-.hero-photo-side{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;animation:fadeUp 1s .3s ease both}
-.photo-frame{position:relative;width:330px;height:390px}
-.photo-frame::before{content:'';position:absolute;top:-12px;left:-12px;right:12px;bottom:12px;border:1px solid var(--ocean-mist);border-radius:2px;z-index:0;transition:transform .4s}
-.photo-frame::after{content:'';position:absolute;top:12px;left:12px;right:-12px;bottom:-12px;border:1px solid rgba(200,106,41,.3);border-radius:2px;z-index:0;transition:transform .4s}
-.photo-frame:hover::before{transform:translate(-4px,-4px)}
-.photo-frame:hover::after{transform:translate(4px,4px)}
-.photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:2px;position:relative;z-index:1;transition:filter .5s}
-.photo-frame:hover img{filter:saturate(1.1) contrast(1.02)}
-.photo-caption{position:absolute;bottom:-2.2rem;left:0;right:0;text-align:center;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--forest-soft);opacity:.65}
+.photo-caption {
+  position:absolute; bottom:-2rem; left:0; right:0;
+  text-align:center;
+  font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--forest-soft); opacity:.7;
+}
 
-/* Graphic recording doodle elements (SVG) */
-.doodle-wrap{position:absolute;pointer-events:none;opacity:.18}
-.doodle-wrap svg .doodle-path{stroke-dasharray:1000;stroke-dashoffset:1000;animation:drawIn 3s ease forwards}
-@keyframes drawIn{to{stroke-dashoffset:0}}
-
-.scroll-hint{position:absolute;bottom:2.5rem;left:4rem;display:flex;align-items:center;gap:.8rem;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--forest-soft);opacity:.4;animation:fadeUp 1s 1.2s ease both}
-.scroll-line{width:44px;height:1px;background:var(--forest-soft);animation:scrollPulse 2.5s ease-in-out infinite;transform-origin:left}
-@keyframes scrollPulse{0%,100%{transform:scaleX(1);opacity:.4}50%{transform:scaleX(.35);opacity:.12}}
+/* Scroll hint */
+.scroll-hint {
+  position:absolute; bottom:2.5rem; left:4rem;
+  display:flex; align-items:center; gap:.8rem;
+  font-size:.65rem; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--forest-soft); opacity:.4;
+  animation:fadeUp 1s 1s ease both;
+}
+.scroll-line { width:44px; height:1px; background:var(--forest-soft); animation:scrollPulse 2.5s ease-in-out infinite; transform-origin:left; }
+@keyframes scrollPulse { 0%,100%{transform:scaleX(1);opacity:.4} 50%{transform:scaleX(.4);opacity:.15} }
 
 /* ── BREATH BAND ── */
-.breath-band{background:var(--forest-deep);color:rgba(144,142,129,.82);padding:1.3rem 4rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;letter-spacing:.05em;text-align:center;overflow:hidden}
-.breath-inner{display:inline-flex;gap:3.5rem;white-space:nowrap;animation:marquee 38s linear infinite}
-.breath-item{display:flex;align-items:center;gap:1.5rem}
-.breath-item::after{content:'·';opacity:.35}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.breath-band {
+  background:var(--forest-deep); color:rgba(144,142,129,.85);
+  padding:1.3rem 4rem; font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:1.1rem; letter-spacing:.05em;
+  text-align:center; overflow:hidden;
+}
+.breath-inner { display:inline-flex; gap:3.5rem; white-space:nowrap; animation:marquee 35s linear infinite; }
+.breath-item { display:flex; align-items:center; gap:1.5rem; }
+.breath-item::after { content:'·'; opacity:.35; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-/* ── SHARED ── */
-section{padding:8rem 4rem}
-.s-inner{max-width:1100px;margin:0 auto}
-.s-label{display:flex;align-items:center;gap:.75rem;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ocean-deep);font-weight:500;margin-bottom:1.2rem}
-.s-label::before{content:'';width:2rem;height:1px;background:var(--ocean-deep)}
-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:300;line-height:1.15;letter-spacing:-.015em;color:var(--forest-deep);margin-bottom:1rem}
-h2 em{font-style:italic;color:var(--ocean-deep)}
-
-/* Text hover shimmer effect */
-.shimmer-text{background:linear-gradient(90deg,var(--forest-deep) 0%,var(--ocean-deep) 40%,var(--autumn-mid) 60%,var(--forest-deep) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
-@keyframes shimmer{to{background-position:200% center}}
+/* ── SHARED SECTION STYLES ── */
+section { padding:8rem 4rem; }
+.s-inner { max-width:1100px; margin:0 auto; }
+.s-label {
+  display:flex; align-items:center; gap:.75rem;
+  font-size:.66rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ocean-deep); font-weight:500; margin-bottom:1.2rem;
+}
+.s-label::before { content:''; width:2rem; height:1px; background:var(--ocean-deep); }
+h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:300; line-height:1.15; letter-spacing:-.015em;
+  color:var(--forest-deep); margin-bottom:1rem;
+}
+h2 em { font-style:italic; color:var(--ocean-deep); }
 
 /* ── WHO I SERVE ── */
-#serve{background:var(--parchment);position:relative;overflow:hidden}
-.serve-intro{max-width:640px;margin-bottom:4rem}
-.serve-intro p{font-size:1rem;line-height:1.9;color:var(--forest-mid);opacity:.85;margin-top:1rem}
-.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.serve-card{background:var(--cream);border:1px solid rgba(47,50,29,.08);border-radius:2px;padding:2rem;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .3s;position:relative;overflow:hidden}
-.serve-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--acc,var(--forest-soft));transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
-.serve-card:hover::before{transform:scaleX(1)}
-.serve-card:hover{transform:translateY(-7px) rotate(.3deg);box-shadow:0 18px 44px rgba(19,19,10,.1);border-color:rgba(47,50,29,.14)}
-.serve-icon{font-size:1.8rem;margin-bottom:1rem;display:block;transition:transform .3s}
-.serve-card:hover .serve-icon{transform:scale(1.2) rotate(-5deg)}
-.serve-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--forest-deep);margin-bottom:.6rem}
-.serve-card p{font-size:.86rem;line-height:1.82;color:var(--forest-mid);opacity:.72}
+#serve { background:var(--parchment); }
+.serve-intro { max-width:640px; margin-bottom:4rem; }
+.serve-intro p { font-size:1.02rem; line-height:1.9; color:var(--forest-mid); opacity:.85; margin-top:1rem; }
+.serve-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+.serve-card {
+  background:var(--cream); border:1px solid rgba(47,50,29,.08);
+  border-radius:2px; padding:2rem;
+  transition:transform .35s, box-shadow .35s, border-color .3s;
+  position:relative; overflow:hidden;
+}
+.serve-card::before {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background:var(--acc, var(--forest-soft));
+  transform:scaleX(0); transform-origin:left; transition:transform .4s;
+}
+.serve-card:hover::before { transform:scaleX(1); }
+.serve-card:hover { transform:translateY(-5px); box-shadow:0 14px 36px rgba(19,19,10,.1); border-color:rgba(47,50,29,.15); }
+.serve-icon { font-size:1.8rem; margin-bottom:1rem; display:block; }
+.serve-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--forest-deep); margin-bottom:.6rem; }
+.serve-card p { font-size:.87rem; line-height:1.82; color:var(--forest-mid); opacity:.72; }
 
-/* ── QUEER/ACTIVISM SECTION ── */
-#activism{background:var(--forest-deep);color:var(--cream);position:relative;overflow:hidden}
-#activism .s-label{color:var(--ocean-mist)}
-#activism .s-label::before{background:var(--ocean-mist)}
-#activism h2{color:var(--cream)}
-#activism h2 em{color:var(--autumn-sand)}
+/* ── ABOUT / PHILOSOPHY ── */
+#about { background:var(--cream); }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; margin-top:3.5rem; }
+.about-text p { font-size:1.02rem; line-height:1.95; color:var(--forest-mid); opacity:.82; margin-bottom:1.4rem; }
+.pull-quote {
+  border-left:3px solid var(--autumn-mid);
+  padding-left:1.4rem;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:1.2rem; line-height:1.6;
+  color:var(--forest-deep); margin:2rem 0;
+}
+.stats-col { display:flex; flex-direction:column; gap:1.1rem; }
+.stat-row {
+  display:flex; align-items:center; gap:1.4rem;
+  padding:1.4rem 1.6rem; background:var(--parchment);
+  border-radius:2px; border:1px solid rgba(47,50,29,.08);
+  transition:transform .3s;
+}
+.stat-row:hover { transform:translateX(5px); }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; min-width:72px; color:var(--acc2, var(--ocean-deep)); }
+.stat-desc { font-size:.86rem; line-height:1.6; color:var(--forest-mid); opacity:.72; }
 
-/* Pride stripe */
-.pride-stripe{height:4px;display:flex;width:100%;margin-bottom:3.5rem;border-radius:2px;overflow:hidden}
-.pride-stripe span{flex:1;animation:prideGlow 3s ease-in-out infinite alternate}
-.pride-stripe span:nth-child(1){background:var(--pride-red);animation-delay:0s}
-.pride-stripe span:nth-child(2){background:var(--pride-orange);animation-delay:.2s}
-.pride-stripe span:nth-child(3){background:var(--pride-yellow);animation-delay:.4s}
-.pride-stripe span:nth-child(4){background:var(--pride-green);animation-delay:.6s}
-.pride-stripe span:nth-child(5){background:var(--pride-blue);animation-delay:.8s}
-.pride-stripe span:nth-child(6){background:var(--pride-violet);animation-delay:1s}
-@keyframes prideGlow{from{filter:brightness(1)}to{filter:brightness(1.3)}}
-
-.activism-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
-.activism-card{background:rgba(144,142,129,.07);border:1px solid rgba(144,142,129,.13);border-radius:2px;padding:2.2rem;transition:background .35s,transform .35s}
-.activism-card:hover{background:rgba(144,142,129,.13);transform:translateY(-5px)}
-.activism-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--autumn-sand);margin-bottom:.8rem}
-.activism-card p{font-size:.9rem;line-height:1.85;color:rgba(246,243,236,.8)}
-.activism-tag{display:inline-block;margin-top:1rem;padding:.28rem .75rem;border-radius:2px;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
-
-/* ── ABOUT ── */
-#about{background:var(--cream);position:relative;overflow:hidden}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3.5rem}
-.about-text p{font-size:1rem;line-height:1.95;color:var(--forest-mid);opacity:.82;margin-bottom:1.4rem}
-.pull-quote{border-left:3px solid var(--autumn-mid);padding-left:1.4rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;line-height:1.6;color:var(--forest-deep);margin:2rem 0;transition:border-color .3s}
-.pull-quote:hover{border-color:var(--ocean-deep)}
-.stats-col{display:flex;flex-direction:column;gap:1.1rem}
-.stat-row{display:flex;align-items:center;gap:1.4rem;padding:1.4rem 1.6rem;background:var(--parchment);border-radius:2px;border:1px solid rgba(47,50,29,.08);transition:transform .3s,box-shadow .3s}
-.stat-row:hover{transform:translateX(6px);box-shadow:4px 0 12px rgba(19,19,10,.06)}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;min-width:72px;color:var(--acc2,var(--ocean-deep))}
-.stat-desc{font-size:.86rem;line-height:1.6;color:var(--forest-mid);opacity:.72}
-.linkedin-link{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.7rem 1.4rem;border-radius:2px;border:1.5px solid var(--ocean-mid);color:var(--ocean-deep);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .25s,color .25s,transform .2s}
-.linkedin-link:hover{background:var(--ocean-deep);color:var(--cream);transform:translateY(-2px)}
-
-/* ── GRAPHIC RECORDING SHOWCASE ── */
-#graphic-recording{background:var(--parchment);position:relative;overflow:hidden}
-#graphic-recording .s-label{color:var(--autumn-mid)}
-#graphic-recording .s-label::before{background:var(--autumn-mid)}
-.gr-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem}
-.gr-text p{font-size:1rem;line-height:1.9;color:var(--forest-mid);opacity:.82;margin-bottom:1.2rem}
-/* Animated SVG doodle panel */
-.gr-canvas{background:white;border-radius:4px;padding:2rem;box-shadow:0 8px 32px rgba(19,19,10,.08);min-height:300px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.gr-canvas svg{max-width:100%;height:auto}
-.draw-path{stroke-dasharray:2000;stroke-dashoffset:2000}
-.draw-path.animate{animation:draw 4s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
+/* LinkedIn link */
+.linkedin-link {
+  display:inline-flex; align-items:center; gap:.6rem;
+  margin-top:1.5rem;
+  padding:.7rem 1.4rem; border-radius:2px;
+  border:1.5px solid var(--ocean-mid); color:var(--ocean-deep);
+  font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+  text-decoration:none; font-weight:500;
+  transition:background .25s, color .25s;
+}
+.linkedin-link:hover { background:var(--ocean-deep); color:var(--cream); }
 
 /* ── OFFERINGS ── */
-#offerings{background:var(--forest-deep);color:var(--forest-warm);position:relative;overflow:hidden}
-#offerings .s-label{color:var(--autumn-sand)}
-#offerings .s-label::before{background:var(--autumn-sand)}
-#offerings h2{color:var(--cream)}
-#offerings h2 em{color:var(--autumn-sand)}
-.off-intro{max-width:600px;margin-bottom:4rem}
-.off-intro p{font-size:1rem;line-height:1.9;color:var(--forest-warm);opacity:.8;margin-top:1rem}
-.off-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.off-card{background:rgba(144,142,129,.06);border:1px solid rgba(144,142,129,.12);border-radius:2px;padding:2.2rem;transition:background .35s,transform .4s cubic-bezier(.23,1,.32,1);cursor:default}
-.off-card:hover{background:rgba(144,142,129,.13);transform:translateY(-7px) rotate(-.3deg)}
-.off-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:300;color:var(--autumn-sand);opacity:.28;line-height:1;margin-bottom:1rem;transition:opacity .3s}
-.off-card:hover .off-num{opacity:.55}
-.off-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--cream);margin-bottom:.7rem}
-.off-card p{font-size:.88rem;line-height:1.85;color:var(--forest-warm);opacity:.75}
+#offerings { background:var(--forest-deep); color:var(--forest-warm); }
+#offerings .s-label { color:var(--autumn-sand); }
+#offerings .s-label::before { background:var(--autumn-sand); }
+#offerings h2 { color:var(--cream); }
+#offerings h2 em { color:var(--autumn-sand); }
+.off-intro { max-width:600px; margin-bottom:4rem; }
+.off-intro p { font-size:1.02rem; line-height:1.9; color:var(--forest-warm); opacity:.8; margin-top:1rem; }
+.off-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.off-card {
+  background:rgba(144,142,129,.06); border:1px solid rgba(144,142,129,.12);
+  border-radius:2px; padding:2.2rem;
+  transition:background .35s, transform .35s;
+}
+.off-card:hover { background:rgba(144,142,129,.12); transform:translateY(-5px); }
+.off-num { font-family:'Cormorant Garamond',serif; font-size:3.2rem; font-weight:300; color:var(--autumn-sand); opacity:.3; line-height:1; margin-bottom:1rem; }
+.off-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--cream); margin-bottom:.7rem; }
+.off-card p { font-size:.88rem; line-height:1.85; color:var(--forest-warm); opacity:.75; }
 
 /* ── METHODOLOGY ── */
-#methodology{background:var(--parchment);position:relative;overflow:hidden}
-.method-group{margin-bottom:2.5rem}
-.method-group-title{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--forest-mid);opacity:.5;font-weight:500;margin-bottom:.9rem;padding-bottom:.45rem;border-bottom:1px solid rgba(47,50,29,.1)}
-.pills{display:flex;flex-wrap:wrap;gap:.65rem}
-.pill{padding:.5rem 1.1rem;border-radius:2px;font-size:.8rem;font-weight:400;letter-spacing:.03em;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s;display:inline-block;cursor:pointer}
-.pill:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 6px 16px rgba(0,0,0,.1)}
-.p-forest{background:rgba(83,85,57,.12);color:var(--forest-mid);border:1px solid rgba(83,85,57,.22)}
-.p-ocean{background:rgba(74,127,140,.1);color:var(--ocean-deep);border:1px solid rgba(74,127,140,.22)}
-.p-autumn{background:rgba(200,106,41,.1);color:var(--autumn-deep);border:1px solid rgba(200,106,41,.22)}
-.p-warm{background:rgba(144,142,129,.15);color:#5a5847;border:1px solid rgba(144,142,129,.25)}
+#methodology { background:var(--parchment); }
+.method-group { margin-bottom:2.5rem; }
+.method-group-title { font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--forest-mid); opacity:.5; font-weight:500; margin-bottom:.9rem; padding-bottom:.45rem; border-bottom:1px solid rgba(47,50,29,.1); }
+.pills { display:flex; flex-wrap:wrap; gap:.65rem; }
+.pill {
+  padding:.5rem 1.1rem; border-radius:2px;
+  font-size:.8rem; font-weight:400; letter-spacing:.03em;
+  text-decoration:none; transition:transform .2s, box-shadow .2s;
+  display:inline-block;
+}
+.pill:hover { transform:translateY(-2px); box-shadow:0 5px 14px rgba(0,0,0,.09); }
+.p-forest { background:rgba(83,85,57,.12); color:var(--forest-mid); border:1px solid rgba(83,85,57,.22); }
+.p-ocean  { background:rgba(74,127,140,.1);  color:var(--ocean-deep); border:1px solid rgba(74,127,140,.22); }
+.p-autumn { background:rgba(200,106,41,.1);  color:var(--autumn-deep); border:1px solid rgba(200,106,41,.22); }
+.p-warm   { background:rgba(144,142,129,.15); color:#5a5847; border:1px solid rgba(144,142,129,.25); }
 
 /* ── WORK ── */
-#work{background:var(--cream)}
-.work-list{display:flex;flex-direction:column;border-top:1px solid rgba(47,50,29,.1);margin-top:3.5rem}
-.work-item{display:grid;grid-template-columns:110px 1fr auto;gap:2rem;align-items:start;padding:1.8rem 0;border-bottom:1px solid rgba(47,50,29,.07);transition:padding-left .35s ease,background .25s,transform .35s}
-.work-item:hover{padding-left:1.2rem;background:rgba(83,85,57,.03)}
-.work-year{font-size:.75rem;letter-spacing:.1em;color:var(--forest-mid);opacity:.4;padding-top:.25rem}
-.work-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--forest-deep);margin-bottom:.4rem;line-height:1.3}
-.work-body p{font-size:.87rem;line-height:1.8;color:var(--forest-mid);opacity:.68}
-.work-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean-deep);white-space:nowrap;padding-top:.35rem;opacity:.75}
+#work { background:var(--cream); }
+.work-list { display:flex; flex-direction:column; gap:0; border-top:1px solid rgba(47,50,29,.1); margin-top:3.5rem; }
+.work-item {
+  display:grid; grid-template-columns:110px 1fr auto;
+  gap:2rem; align-items:start; padding:1.8rem 0;
+  border-bottom:1px solid rgba(47,50,29,.07);
+  transition:padding-left .3s ease, background .25s;
+  cursor:default;
+}
+.work-item:hover { padding-left:1rem; background:rgba(83,85,57,.03); }
+.work-year { font-size:.75rem; letter-spacing:.1em; color:var(--forest-mid); opacity:.4; padding-top:.25rem; }
+.work-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--forest-deep); margin-bottom:.4rem; line-height:1.3; }
+.work-body p { font-size:.87rem; line-height:1.8; color:var(--forest-mid); opacity:.68; }
+.work-tag { font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ocean-deep); white-space:nowrap; padding-top:.35rem; opacity:.75; }
 
 /* ── BOOKS LIBRARY ── */
-#books{background:var(--forest-deep);color:var(--cream);position:relative;overflow:hidden}
-#books .s-label{color:var(--autumn-sand)}
-#books .s-label::before{background:var(--autumn-sand)}
-#books h2{color:var(--cream)}
-#books h2 em{color:var(--autumn-sand)}
-.books-intro{max-width:620px;margin-bottom:3.5rem}
-.books-intro p{font-size:1rem;line-height:1.9;color:var(--forest-warm);opacity:.8;margin-top:1rem}
-.books-author-group{margin-bottom:3.5rem}
-.books-author-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--autumn-sand);margin-bottom:.3rem}
-.books-author-bio{font-size:.84rem;color:var(--forest-warm);opacity:.65;margin-bottom:1.5rem;line-height:1.7;max-width:640px}
-.books-row{display:flex;flex-wrap:wrap;gap:1.2rem}
-.book-card{width:140px;flex-shrink:0;text-decoration:none;transition:transform .35s cubic-bezier(.23,1,.32,1)}
-.book-card:hover{transform:translateY(-8px) rotate(1.5deg)}
-.book-cover{width:140px;height:200px;border-radius:3px;display:flex;align-items:flex-end;justify-content:center;padding:.8rem .6rem;font-family:'Cormorant Garamond',serif;font-size:.7rem;font-weight:600;color:var(--cream);text-align:center;line-height:1.3;position:relative;overflow:hidden;box-shadow:4px 6px 16px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.08);transition:box-shadow .35s}
-.book-card:hover .book-cover{box-shadow:6px 12px 28px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.12)}
-.book-cover::before{content:'';position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(to bottom,rgba(255,255,255,.1),transparent)}
-.book-cover.ocean{background:linear-gradient(145deg,var(--ocean-deep),#0d3838)}
-.book-cover.autumn{background:linear-gradient(145deg,var(--autumn-deep),#3a1a05)}
-.book-cover.forest{background:linear-gradient(145deg,var(--forest-mid),var(--forest-deep))}
-.book-cover.mixed{background:linear-gradient(145deg,#3a4a2a,#1a2510)}
-.book-title-text{position:relative;z-index:1}
-.book-meta{margin-top:.5rem}
-.book-title{font-size:.72rem;color:var(--forest-warm);opacity:.85;line-height:1.3;display:block}
-.book-btn{display:inline-block;margin-top:.3rem;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean-mist);text-decoration:none;opacity:.7;transition:opacity .2s}
-.book-btn:hover{opacity:1}
+#books { background:var(--forest-deep); color:var(--cream); }
+#books .s-label { color:var(--autumn-sand); }
+#books .s-label::before { background:var(--autumn-sand); }
+#books h2 { color:var(--cream); }
+#books h2 em { color:var(--autumn-sand); }
+.books-intro { max-width:620px; margin-bottom:3.5rem; }
+.books-intro p { font-size:1rem; line-height:1.9; color:var(--forest-warm); opacity:.8; margin-top:1rem; }
+.books-author-group { margin-bottom:3.5rem; }
+.books-author-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem; font-weight:600; color:var(--autumn-sand);
+  margin-bottom:.35rem;
+}
+.books-author-bio { font-size:.85rem; color:var(--forest-warm); opacity:.65; margin-bottom:1.5rem; line-height:1.7; }
+.books-row { display:flex; flex-wrap:wrap; gap:1.2rem; }
+.book-card {
+  width:140px; flex-shrink:0;
+  text-decoration:none;
+  transition:transform .3s;
+}
+.book-card:hover { transform:translateY(-6px); }
+.book-cover {
+  width:140px; height:200px;
+  border-radius:3px;
+  background:linear-gradient(145deg, var(--forest-soft), var(--forest-mid));
+  display:flex; align-items:flex-end; justify-content:center;
+  padding:.8rem .6rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:.75rem; font-weight:600; color:var(--cream);
+  text-align:center; line-height:1.3;
+  position:relative; overflow:hidden;
+  box-shadow:3px 3px 12px rgba(0,0,0,.3);
+}
+.book-cover::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:60%;
+  background:linear-gradient(to bottom, rgba(255,255,255,.08), transparent);
+}
+.book-cover.ocean { background:linear-gradient(145deg, var(--ocean-deep), #0d3838); }
+.book-cover.autumn { background:linear-gradient(145deg, var(--autumn-deep), #3a1a05); }
+.book-cover.forest { background:linear-gradient(145deg, var(--forest-mid), var(--forest-deep)); }
+.book-cover.mixed { background:linear-gradient(145deg, #3a4a2a, #1a2510); }
+.book-title-text { position:relative; z-index:1; font-size:.7rem; }
+.book-meta { margin-top:.5rem; }
+.book-title { font-size:.75rem; color:var(--forest-warm); opacity:.85; line-height:1.3; display:block; }
+.book-btn {
+  display:inline-block; margin-top:.35rem;
+  font-size:.62rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ocean-mist); text-decoration:none; opacity:.7;
+  transition:opacity .2s;
+}
+.book-btn:hover { opacity:1; }
 
 /* ── COMMUNITY ── */
-#community{background:linear-gradient(150deg,var(--ocean-deep),var(--forest-mid));color:var(--cream)}
-#community .s-label{color:var(--ocean-mist)}
-#community .s-label::before{background:var(--ocean-mist)}
-#community h2{color:var(--cream)}
-#community h2 em{color:var(--autumn-sand)}
-.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem}
-.comm-card{background:rgba(246,243,236,.07);border:1px solid rgba(246,243,236,.13);border-radius:2px;padding:2.2rem;transition:background .35s,transform .35s}
-.comm-card:hover{background:rgba(246,243,236,.13);transform:translateY(-5px)}
-.comm-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--autumn-sand);margin-bottom:.8rem}
-.comm-card p{font-size:.9rem;line-height:1.85;color:rgba(246,243,236,.82);margin-bottom:1.4rem}
-.comm-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean-mist);text-decoration:none;border-bottom:1px solid rgba(168,200,208,.3);padding-bottom:.2rem;transition:color .2s,border-color .2s}
-.comm-link:hover{color:var(--cream);border-color:var(--cream)}
+#community { background:linear-gradient(150deg, var(--ocean-deep), var(--forest-mid)); color:var(--cream); }
+#community .s-label { color:var(--ocean-mist); }
+#community .s-label::before { background:var(--ocean-mist); }
+#community h2 { color:var(--cream); }
+#community h2 em { color:var(--autumn-sand); }
+.comm-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:3.5rem; }
+.comm-card {
+  background:rgba(246,243,236,.07); border:1px solid rgba(246,243,236,.13);
+  border-radius:2px; padding:2.2rem;
+  transition:background .3s, transform .3s;
+}
+.comm-card:hover { background:rgba(246,243,236,.12); transform:translateY(-4px); }
+.comm-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:600; color:var(--autumn-sand); margin-bottom:.8rem; }
+.comm-card p { font-size:.9rem; line-height:1.85; color:rgba(246,243,236,.82); margin-bottom:1.4rem; }
+.comm-link {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ocean-mist); text-decoration:none;
+  border-bottom:1px solid rgba(168,200,208,.3); padding-bottom:.2rem;
+  transition:color .2s, border-color .2s;
+}
+.comm-link:hover { color:var(--cream); border-color:var(--cream); }
 
 /* ── BLOG ── */
-#blog{background:var(--parchment)}
-.blog-intro{max-width:620px;margin-bottom:3.5rem}
-.blog-intro p{font-size:1rem;line-height:1.9;color:var(--forest-mid);opacity:.82;margin-top:1rem}
-.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
-.blog-card{background:var(--cream);border:1px solid rgba(47,50,29,.08);border-radius:2px;padding:2.2rem;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .3s}
-.blog-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(19,19,10,.1);border-color:rgba(47,50,29,.14)}
-.blog-category{display:inline-block;padding:.28rem .75rem;border-radius:2px;font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500;margin-bottom:1rem}
-.cat-forest{background:rgba(83,85,57,.12);color:var(--forest-mid)}
-.cat-ocean{background:rgba(74,127,140,.1);color:var(--ocean-deep)}
-.cat-autumn{background:rgba(200,106,41,.1);color:var(--autumn-deep)}
-.cat-pride{background:linear-gradient(90deg,rgba(228,3,3,.1),rgba(0,77,255,.1));color:var(--ocean-deep)}
-.blog-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--forest-deep);margin-bottom:.6rem;line-height:1.35}
-.blog-date{font-size:.72rem;letter-spacing:.08em;color:var(--forest-soft);opacity:.6;margin-bottom:.8rem}
-.blog-card p{font-size:.88rem;line-height:1.82;color:var(--forest-mid);opacity:.72}
-.blog-read{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.2rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean-deep);text-decoration:none;font-weight:500;transition:gap .2s}
-.blog-read:hover{gap:.8rem}
-.coming-soon-banner{text-align:center;padding:3rem;border:1.5px dashed rgba(47,50,29,.18);border-radius:2px;margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--forest-soft);opacity:.7}
+#blog { background:var(--parchment); }
+.blog-intro { max-width:620px; margin-bottom:3.5rem; }
+.blog-intro p { font-size:1rem; line-height:1.9; color:var(--forest-mid); opacity:.82; margin-top:1rem; }
+.blog-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem; }
+.blog-card {
+  background:var(--cream); border:1px solid rgba(47,50,29,.08);
+  border-radius:2px; padding:2.2rem;
+  transition:transform .35s, box-shadow .35s, border-color .3s;
+}
+.blog-card:hover { transform:translateY(-5px); box-shadow:0 14px 36px rgba(19,19,10,.1); border-color:rgba(47,50,29,.14); }
+.blog-category {
+  display:inline-block; padding:.28rem .75rem; border-radius:2px;
+  font-size:.65rem; letter-spacing:.13em; text-transform:uppercase;
+  font-weight:500; margin-bottom:1rem;
+}
+.cat-forest { background:rgba(83,85,57,.12); color:var(--forest-mid); }
+.cat-ocean  { background:rgba(74,127,140,.1); color:var(--ocean-deep); }
+.cat-autumn { background:rgba(200,106,41,.1); color:var(--autumn-deep); }
+.blog-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--forest-deep); margin-bottom:.6rem; line-height:1.35; }
+.blog-date { font-size:.72rem; letter-spacing:.08em; color:var(--forest-soft); opacity:.6; margin-bottom:.8rem; }
+.blog-card p { font-size:.88rem; line-height:1.82; color:var(--forest-mid); opacity:.72; }
+.blog-read {
+  display:inline-flex; align-items:center; gap:.4rem;
+  margin-top:1.2rem; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ocean-deep); text-decoration:none; font-weight:500;
+  transition:gap .2s;
+}
+.blog-read:hover { gap:.7rem; }
+.coming-soon-banner {
+  text-align:center; padding:3rem;
+  border:1.5px dashed rgba(47,50,29,.2);
+  border-radius:2px; margin-top:1.5rem;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:1.1rem; color:var(--forest-soft); opacity:.7;
+}
 
 /* ── QUOTE ── */
-#quote{background:var(--cream);padding:8rem 4rem;text-align:center;position:relative;overflow:hidden}
-.quote-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:20rem;color:rgba(47,50,29,.03);pointer-events:none;white-space:nowrap;line-height:1}
-.quote-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:300;line-height:1.5;max-width:780px;margin:0 auto 1.4rem;color:var(--forest-deep);position:relative}
-.quote-attr{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--forest-soft);opacity:.5}
+#quote { background:var(--cream); padding:8rem 4rem; text-align:center; position:relative; overflow:hidden; }
+.quote-bg { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'Cormorant Garamond',serif; font-size:20rem; color:rgba(47,50,29,.03); pointer-events:none; white-space:nowrap; line-height:1; }
+.quote-text { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.4rem,3vw,2.2rem); font-weight:300; line-height:1.5; max-width:780px; margin:0 auto 1.4rem; color:var(--forest-deep); position:relative; }
+.quote-attr { font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--forest-soft); opacity:.5; }
 
 /* ── CONTACT ── */
-#contact{background:var(--parchment)}
-.contact-inner{max-width:700px;margin:0 auto;text-align:center}
-.contact-p{font-size:1rem;line-height:1.9;color:var(--forest-mid);opacity:.8;margin:1rem auto 3rem;max-width:520px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:560px;margin:0 auto}
-.c-chip{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.6rem;border-radius:2px;border:1.5px solid rgba(47,50,29,.15);color:var(--forest-mid);text-decoration:none;font-size:.84rem;transition:border-color .25s,background .25s,transform .2s}
-.c-chip:hover{border-color:var(--ocean-deep);background:rgba(74,127,140,.06);transform:translateY(-2px)}
+#contact { background:var(--parchment); }
+.contact-inner { max-width:680px; margin:0 auto; text-align:center; }
+.contact-p { font-size:1.02rem; line-height:1.9; color:var(--forest-mid); opacity:.8; margin:1rem auto 2.5rem; max-width:520px; }
+
+/* ── CONTACT FORM ── */
+.contact-form {
+  background: var(--cream);
+  border: 1px solid rgba(47,50,29,.1);
+  border-radius: 4px;
+  padding: 2.5rem;
+  text-align: left;
+}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-bottom:1.2rem; }
+.form-group { display:flex; flex-direction:column; gap:.4rem; }
+.form-group.full { grid-column:1/-1; }
+.form-group label {
+  font-size:.65rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--forest-soft); font-weight:500;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--parchment);
+  border: 1px solid rgba(47,50,29,.15);
+  border-radius: 2px;
+  padding: .85rem 1rem;
+  font-family: 'Jost', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;
+  color: var(--forest-deep);
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+  width: 100%;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--ocean-deep);
+  box-shadow: 0 0 0 3px rgba(26,92,92,.08);
+}
+.form-group textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
+.form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23535539' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem; cursor:pointer; }
+.form-submit {
+  width: 100%;
+  background: var(--forest-mid);
+  color: var(--cream);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  font-family: 'Jost', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  transition: background .25s, transform .2s, box-shadow .25s;
+  position: relative;
+  overflow: hidden;
+}
+.form-submit:hover { background:var(--forest-deep); transform:translateY(-2px); box-shadow:0 8px 24px rgba(19,19,10,.2); }
+.form-submit:active { transform:translateY(0); }
+.form-note {
+  font-size:.7rem; color:var(--forest-soft); opacity:.6;
+  text-align:center; margin-top:1rem; line-height:1.6;
+}
+.form-linkedin {
+  display:inline-flex; align-items:center; gap:.5rem;
+  margin-top:1.8rem;
+  font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ocean-deep); text-decoration:none; font-weight:500;
+  border-bottom:1px solid rgba(26,92,92,.25); padding-bottom:.2rem;
+  transition:border-color .2s, color .2s;
+}
+.form-linkedin:hover { color:var(--ocean-mid); border-color:var(--ocean-mid); }
+/* Success message */
+#form-success {
+  display:none; text-align:center; padding:2.5rem;
+  background:rgba(26,92,92,.06); border:1px solid rgba(26,92,92,.15);
+  border-radius:4px;
+}
+#form-success .success-icon { font-size:2.5rem; margin-bottom:1rem; }
+#form-success h3 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:var(--forest-deep); margin-bottom:.6rem; }
+#form-success p { font-size:.9rem; color:var(--forest-mid); opacity:.75; }
 
 /* ── FOOTER ── */
-footer{background:var(--forest-deep);color:var(--forest-warm);padding:2.2rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:.75rem}
-footer a{color:var(--ocean-mist);text-decoration:none}
+footer {
+  background:var(--forest-deep); color:var(--forest-warm);
+  padding:2.2rem 4rem; display:flex; justify-content:space-between;
+  align-items:center; font-size:.75rem; opacity:.9;
+}
+footer a { color:var(--ocean-mist); text-decoration:none; }
 
-/* ── WORD FLOAT ANIMATION ── */
-.float-word{display:inline-block;animation:wordFloat 4s ease-in-out infinite alternate}
-@keyframes wordFloat{from{transform:translateY(0)}to{transform:translateY(-8px)}}
-
-/* ── FADE/SLIDE REVEAL ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(36px);transition:opacity .85s ease,transform .85s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .85s ease,transform .85s ease}
-.reveal-left.visible{opacity:1;transform:translateX(0)}
-.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .85s ease,transform .85s ease}
-.reveal-right.visible{opacity:1;transform:translateX(0)}
-.reveal-scale{opacity:0;transform:scale(.92);transition:opacity .8s ease,transform .8s ease}
-.reveal-scale.visible{opacity:1;transform:scale(1)}
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+.reveal { opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-  nav{padding:1.1rem 1.5rem}
-  .nav-links{display:none}
-  section{padding:5rem 1.5rem}
-  #hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem}
-  .hero-photo-side{order:-1}
-  .photo-frame{width:240px;height:280px}
-  .hero-ring{display:none}
-  .serve-grid,.off-grid,.comm-grid,.blog-grid,.activism-grid,.gr-grid{grid-template-columns:1fr}
-  .about-grid{grid-template-columns:1fr;gap:3rem}
-  .work-item{grid-template-columns:80px 1fr}
-  .work-tag{display:none}
-  .contact-grid{grid-template-columns:1fr}
-  footer{flex-direction:column;gap:.6rem;text-align:center}
-  .books-row{gap:.8rem}
-  .book-card,.book-cover{width:110px}
-  .book-cover{height:160px}
-  .shape{display:none}
+  nav { padding:1.1rem 1.5rem; }
+  .nav-links { display:none; }
+  section { padding:5rem 1.5rem; }
+  #hero { grid-template-columns:1fr; padding:7rem 1.5rem 4rem; }
+  .hero-photo-side { order:-1; }
+  .photo-frame { width:240px; height:280px; }
+  .hero-ring { display:none; }
+  .serve-grid, .off-grid, .comm-grid, .blog-grid { grid-template-columns:1fr; }
+  .about-grid { grid-template-columns:1fr; gap:3rem; }
+  .work-item { grid-template-columns:80px 1fr; }
+  .work-tag { display:none; }
+  .contact-grid { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  footer { flex-direction:column; gap:.6rem; text-align:center; }
+  .books-row { gap:.8rem; }
+  .book-card { width:110px; }
+  .book-cover { width:110px; height:160px; }
+  .shape { display:none; }
 }
 </style>
 </head>
@@ -408,12 +601,6 @@ footer a{color:var(--ocean-mist);text-decoration:none}
 
 <div id="cur"></div>
 <div id="curR"></div>
-
-<!-- Sound toggle button -->
-<button id="sound-btn" title="Toggle ambient sounds" aria-label="Toggle ambient sounds">
-  <span class="ripple-ring"></span>
-  🌿
-</button>
 
 <!-- ═══ NAV ═══ -->
 <nav>
@@ -423,11 +610,9 @@ footer a{color:var(--ocean-mist);text-decoration:none}
   </div>
   <ul class="nav-links">
     <li><a href="#serve">Who I Serve</a></li>
-    <li><a href="#activism">Activism</a></li>
     <li><a href="#offerings">Offerings</a></li>
-    <li><a href="#graphic-recording">Visual Work</a></li>
     <li><a href="#books">Library</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="#community">Community</a></li>
     <li><a href="#contact">Connect</a></li>
   </ul>
 </nav>
@@ -439,18 +624,9 @@ footer a{color:var(--ocean-mist);text-decoration:none}
   <div class="shape s3"></div>
   <div class="hero-ring"></div>
 
-  <!-- Ripple SVG background -->
-  <div class="ripple-bg" style="opacity:.06">
-    <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-      <circle class="ripple-circle r1" cx="400" cy="400"/>
-      <circle class="ripple-circle r2" cx="400" cy="400"/>
-      <circle class="ripple-circle r3" cx="400" cy="400"/>
-    </svg>
-  </div>
-
   <div class="hero-content">
     <div class="hero-eyebrow">Participatory Leadership · Facilitation · System Change</div>
-    <h1 class="animated-headline">
+    <h1>
       Where <em>stillness</em><br>
       meets <strong>collective</strong><br>
       transformation
@@ -460,6 +636,7 @@ footer a{color:var(--ocean-mist);text-decoration:none}
       communities, and organisations find the clarity, courage, and collective 
       intelligence to build what truly matters.
     </p>
+
     <div class="meraki-card">
       <div class="meraki-word">
         meraki
@@ -467,6 +644,7 @@ footer a{color:var(--ocean-mist);text-decoration:none}
       </div>
       <p class="meraki-def">Doing something with <strong>passion, love, and devotion</strong> — leaving a piece of yourself in whatever you create.</p>
     </div>
+
     <div class="hero-ctas">
       <a href="#offerings" class="btn-forest">Explore My Work</a>
       <a href="#contact" class="btn-ocean">Begin a Conversation</a>
@@ -509,46 +687,33 @@ footer a{color:var(--ocean-mist);text-decoration:none}
 <!-- ═══ WHO I SERVE ═══ -->
 <section id="serve">
   <div class="s-inner">
-    <!-- Ripple bg -->
-    <div class="ripple-bg" style="opacity:.04;z-index:0">
-      <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
-        <circle class="ripple-circle r1" cx="300" cy="300"/>
-        <circle class="ripple-circle r2" cx="300" cy="300"/>
-      </svg>
-    </div>
     <div class="serve-intro reveal">
       <div class="s-label">Who I Serve</div>
       <h2>For those who believe <em>another way</em> is possible</h2>
       <p>I work with purpose-driven individuals and organisations who sense that old ways of leading, deciding, and planning are no longer sufficient — and who are ready to move toward something more alive, more inclusive, and more lasting.</p>
     </div>
     <div class="serve-grid">
-      <div class="serve-card reveal" style="--acc:var(--forest-soft);transition-delay:.05s">
-        <span class="serve-icon">🌍</span>
-        <h3>NGOs &amp; Civil Society</h3>
+      <div class="serve-card reveal" style="--acc:var(--forest-soft); transition-delay:.05s">
+        <h3>NGOs & Civil Society</h3>
         <p>Organisations at the frontiers of human rights, food sovereignty, and ecological justice — ready to align strategy with soul and process with purpose.</p>
       </div>
-      <div class="serve-card reveal" style="--acc:var(--ocean-deep);transition-delay:.1s">
-        <span class="serve-icon">🏛️</span>
-        <h3>Corporates &amp; Institutions</h3>
+      <div class="serve-card reveal" style="--acc:var(--ocean-deep); transition-delay:.1s">
+        <h3>Corporates & Institutions</h3>
         <p>Forward-thinking companies seeking to move beyond top-down management — building cultures of genuine participation and adaptive leadership.</p>
       </div>
-      <div class="serve-card reveal" style="--acc:var(--autumn-mid);transition-delay:.15s">
-        <span class="serve-icon">🌱</span>
-        <h3>Entrepreneurs &amp; Innovators</h3>
+      <div class="serve-card reveal" style="--acc:var(--autumn-mid); transition-delay:.15s">
+        <h3>Entrepreneurs & Innovators</h3>
         <p>Changemakers who need more than a business plan — they need a living strategy rooted in collective intelligence and clear values.</p>
       </div>
-      <div class="serve-card reveal" style="--acc:var(--forest-mid);transition-delay:.2s">
-        <span class="serve-icon">🤝</span>
-        <h3>Community &amp; Movements</h3>
+      <div class="serve-card reveal" style="--acc:var(--forest-mid); transition-delay:.2s">
+        <h3>Community & Movements</h3>
         <p>Grassroots communities and social movements navigating complexity — finding common ground, shared purpose, and the will to act together.</p>
       </div>
-      <div class="serve-card reveal" style="--acc:var(--ocean-mid);transition-delay:.25s">
-        <span class="serve-icon">🌐</span>
+      <div class="serve-card reveal" style="--acc:var(--ocean-mid); transition-delay:.25s">
         <h3>International Development</h3>
         <p>Multilateral agencies and foundations designing programmes that are genuinely participatory — going beyond consultation to real co-ownership.</p>
       </div>
-      <div class="serve-card reveal" style="--acc:var(--autumn-light);transition-delay:.3s">
-        <span class="serve-icon">✨</span>
+      <div class="serve-card reveal" style="--acc:var(--autumn-light); transition-delay:.3s">
         <h3>Leaders in Transition</h3>
         <p>Executives and facilitators at a threshold — ready to deepen their capacity to lead with presence, wisdom, and the courage to invite true dialogue.</p>
       </div>
@@ -556,146 +721,40 @@ footer a{color:var(--ocean-mist);text-decoration:none}
   </div>
 </section>
 
-<!-- ═══ ACTIVISM & QUEER WORK ═══ -->
-<section id="activism">
-  <div class="s-inner">
-    <div class="reveal">
-      <div class="s-label">Activism &amp; Community Work</div>
-      <h2>Holding space for those who have been told <em>there is none</em></h2>
-    </div>
-    <div class="pride-stripe reveal" style="transition-delay:.1s">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="activism-grid">
-      <div class="activism-card reveal" style="transition-delay:.1s">
-        <h3>HQ Collective — Harare Queers Collective</h3>
-        <p>Since 2019 I have organised and facilitated safe, brave spaces for the LGBTIQ+ community in Harare — places where identity is celebrated, where grief is witnessed, and where community-driven solutions to real challenges are born together. This work is close to my heart as a queer-identifying person who believes every human being deserves to be fully seen and fully safe.</p>
-        <p style="margin-top:.8rem;opacity:.65;font-size:.88rem">The HQ Collective holds circles of honest conversation, capacity building, and joy — rooted in the conviction that liberation is a collective practice.</p>
-        <span class="activism-tag" style="background:rgba(117,7,135,.15);color:#c97de0">LGBTIQ+ Safe Spaces</span>
-        <span class="activism-tag" style="background:rgba(0,128,38,.12);color:#5db87a;margin-left:.4rem">Community Building</span>
-      </div>
-      <div class="activism-card reveal" style="transition-delay:.18s">
-        <h3>Future Leaders Global</h3>
-        <p>From 2018 to 2021, I designed and facilitated workshops to enhance team collaboration, leadership development, and curriculum innovation for emerging young leaders across Africa and beyond.</p>
-        <p style="margin-top:.8rem;opacity:.65;font-size:.88rem">The programme created spaces for young people to discover their own leadership voice — not through imitation of old models, but through genuine self-inquiry, peer learning, and the courage to imagine differently.</p>
-        <span class="activism-tag" style="background:rgba(74,127,140,.12);color:var(--ocean-light)">Youth Leadership</span>
-        <span class="activism-tag" style="background:rgba(200,106,41,.1);color:var(--autumn-sand);margin-left:.4rem">Curriculum Design</span>
-      </div>
-      <div class="activism-card reveal" style="transition-delay:.26s">
-        <h3>Advocacy &amp; HIV Awareness</h3>
-        <p>In partnership with Hands of Hope and PSH (2018–2019), I engaged and mobilised key populations for HIV awareness campaigns — linking people to clinical services, advocating for their rights, and holding spaces of dignity and care for those most often left out of the conversation.</p>
-        <span class="activism-tag" style="background:rgba(228,3,3,.08);color:#d46060">Health Rights</span>
-        <span class="activism-tag" style="background:rgba(0,77,255,.08);color:#7aa0d4;margin-left:.4rem">Community Advocacy</span>
-      </div>
-      <div class="activism-card reveal" style="transition-delay:.34s">
-        <h3>Accountability Lab — Good Zimbabwe</h3>
-        <p>From 2020 to 2021, I facilitated stakeholder dialogues to advance transparency and governance initiatives — building bridges between citizens and institutions, and holding open space for honest conversations about power, accountability, and the Zimbabwe we collectively desire.</p>
-        <span class="activism-tag" style="background:rgba(83,85,57,.15);color:var(--forest-warm)">Governance</span>
-        <span class="activism-tag" style="background:rgba(74,127,140,.12);color:var(--ocean-light);margin-left:.4rem">Civic Dialogue</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PHILOSOPHY / ABOUT ═══ -->
+<!-- ═══ ABOUT ═══ -->
 <section id="about">
   <div class="s-inner">
     <div class="s-label reveal">My Philosophy</div>
     <div class="about-grid">
-      <div class="about-text reveal-left">
+      <div class="about-text reveal">
         <h2>The most powerful <em>resource</em> in any room is the wisdom already there</h2>
         <br>
         <p>I have spent over a decade holding the conviction that people — when genuinely invited — are extraordinary. Not because they are special, but because each of us carries lived knowledge, latent creativity, and a deep longing to contribute to something that matters.</p>
         <div class="pull-quote">"People give their energy and lend their resources to what matters most to them — in work as in life."</div>
         <p>My practice rests on this truth. I do not arrive with answers. I arrive with methodologies carefully shaped to open the space where your group's own intelligence can surface, self-organise, and take meaningful action.</p>
         <p>I am proud to work alongside a diverse international community of practitioners, drawing on wisdom traditions and fieldwork spanning five continents.</p>
-        <a href="https://www.linkedin.com/in/irvine-muzuva-1964665b/" target="_blank" class="linkedin-link">
+        <a href="https://www.linkedin.com/in/irvine-muzuva" target="_blank" class="linkedin-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           Connect on LinkedIn
         </a>
       </div>
-      <div class="stats-col reveal-right" style="transition-delay:.15s">
+      <div class="stats-col reveal" style="transition-delay:.2s">
         <div class="stat-row" style="--acc2:var(--ocean-deep)">
-          <div class="stat-num" data-target="10">0</div>
+          <div class="stat-num">10+</div>
           <div class="stat-desc">Years designing transformative participatory processes across Africa and globally</div>
         </div>
         <div class="stat-row" style="--acc2:var(--autumn-mid)">
-          <div class="stat-num" data-target="3000">0</div>
+          <div class="stat-num">3K+</div>
           <div class="stat-desc">Citizens convened in landmark national dialogues to dream and decide collectively</div>
         </div>
         <div class="stat-row" style="--acc2:var(--forest-soft)">
-          <div class="stat-num" data-target="20">0</div>
+          <div class="stat-num">20+</div>
           <div class="stat-desc">Organisations partnered across INGO, corporate, government and community sectors</div>
         </div>
         <div class="stat-row" style="--acc2:var(--ocean-mid)">
-          <div class="stat-num" data-target="5">0</div>
+          <div class="stat-num">5+</div>
           <div class="stat-desc">Continents reached — from São Paulo to Nairobi, Stockholm to Harare</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ GRAPHIC RECORDING ═══ -->
-<section id="graphic-recording">
-  <div class="s-inner">
-    <div class="gr-grid">
-      <div class="gr-text reveal-left">
-        <div class="s-label">Visual Practice</div>
-        <h2>Turning conversations into <em>living pictures</em></h2>
-        <p>I am a graphic recorder and graphic facilitator — someone who translates the invisible currents of group dialogue into visible, memorable images in real time.</p>
-        <p>When words dissolve into the air, a well-placed drawing stays. It anchors insight, bridges language, and gives a group a shared mirror to see their own intelligence reflected back.</p>
-        <p>I offer graphic recording for conferences, strategic retreats, community dialogues, and any gathering where visual memory matters.</p>
-        <div class="pills" style="margin-top:1.5rem">
-          <span class="pill p-autumn">Live Graphic Recording</span>
-          <span class="pill p-ocean">Graphic Facilitation</span>
-          <span class="pill p-forest">Visual Harvesting</span>
-          <span class="pill p-warm">Sketchnotes</span>
-          <span class="pill p-autumn">Template Design</span>
-        </div>
-      </div>
-      <div class="gr-canvas reveal-right" style="transition-delay:.15s">
-        <!-- Animated graphic recording SVG doodle -->
-        <svg id="gr-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:300px">
-          <!-- Board -->
-          <rect x="60" y="30" width="280" height="180" rx="4" fill="#f9f7f2" stroke="#2F321D" stroke-width="2"/>
-          <!-- Board legs -->
-          <line x1="150" y1="210" x2="130" y2="260" stroke="#2F321D" stroke-width="2"/>
-          <line x1="250" y1="210" x2="270" y2="260" stroke="#2F321D" stroke-width="2"/>
-          <line x1="130" y1="260" x2="270" y2="260" stroke="#2F321D" stroke-width="1.5"/>
-          <!-- Person drawing -->
-          <circle cx="30" cy="100" r="12" fill="none" stroke="#535539" stroke-width="2" class="draw-path" id="dp1"/>
-          <line x1="30" y1="112" x2="30" y2="155" stroke="#535539" stroke-width="2" class="draw-path" id="dp2"/>
-          <line x1="30" y1="130" x2="55" y2="120" stroke="#535539" stroke-width="2" class="draw-path" id="dp3"/>
-          <line x1="30" y1="155" x2="15" y2="185" stroke="#535539" stroke-width="2" class="draw-path" id="dp4"/>
-          <line x1="30" y1="155" x2="45" y2="185" stroke="#535539" stroke-width="2" class="draw-path" id="dp5"/>
-          <!-- marker in hand -->
-          <rect x="50" y="115" width="14" height="5" rx="2" fill="#C86A29" class="draw-path" id="dp6"/>
-          <!-- Content on board - drawing in sequence -->
-          <!-- Light bulb icon -->
-          <circle cx="120" cy="80" r="18" fill="none" stroke="#A05820" stroke-width="1.5" class="draw-path" id="dp7"/>
-          <path d="M112 95 L128 95 M115 98 L125 98 M117 101 L123 101" stroke="#A05820" stroke-width="1.5" fill="none" class="draw-path" id="dp8"/>
-          <!-- Arrow -->
-          <path d="M148 80 L180 80" stroke="#1A5C5C" stroke-width="2" fill="none" class="draw-path" id="dp9"/>
-          <path d="M175 74 L185 80 L175 86" stroke="#1A5C5C" stroke-width="2" fill="none" class="draw-path" id="dp10"/>
-          <!-- Circle icon -->
-          <circle cx="210" cy="80" r="20" fill="none" stroke="#535539" stroke-width="1.5" class="draw-path" id="dp11"/>
-          <path d="M202 80 A8 8 0 0 1 218 80" stroke="#535539" stroke-width="1.5" fill="none" class="draw-path" id="dp12"/>
-          <!-- Text line squiggles -->
-          <path d="M80 130 Q120 125 160 130 Q200 135 240 130 Q280 125 320 130" stroke="#908E81" stroke-width="1" fill="none" class="draw-path" id="dp13"/>
-          <path d="M80 148 Q140 143 200 148 Q260 153 320 148" stroke="#908E81" stroke-width="1" fill="none" class="draw-path" id="dp14"/>
-          <path d="M80 166 Q130 161 180 166" stroke="#908E81" stroke-width="1" fill="none" class="draw-path" id="dp15"/>
-          <!-- Heart -->
-          <path d="M260 90 C260 85 255 80 250 83 C245 80 240 85 240 90 C240 100 250 108 250 108 C250 108 260 100 260 90Z" fill="none" stroke="#E40303" stroke-width="1.5" class="draw-path" id="dp16"/>
-          <!-- Star -->
-          <path d="M305 65 L308 73 L316 73 L310 78 L312 86 L305 81 L298 86 L300 78 L294 73 L302 73 Z" fill="none" stroke="#DD8040" stroke-width="1.5" class="draw-path" id="dp17"/>
-          <!-- Speech bubble -->
-          <path d="M290 100 Q320 95 325 115 Q330 135 310 138 L295 148 L300 132 Q280 132 280 115 Q280 100 290 100Z" fill="none" stroke="#4A7F8C" stroke-width="1.5" class="draw-path" id="dp18"/>
-          <!-- Dots in speech -->
-          <circle cx="297" cy="120" r="2" fill="#4A7F8C" class="draw-path" id="dp19"/>
-          <circle cx="305" cy="120" r="2" fill="#4A7F8C" class="draw-path" id="dp20"/>
-          <circle cx="313" cy="120" r="2" fill="#4A7F8C" class="draw-path" id="dp21"/>
-        </svg>
       </div>
     </div>
   </div>
@@ -704,14 +763,6 @@ footer a{color:var(--ocean-mist);text-decoration:none}
 <!-- ═══ OFFERINGS ═══ -->
 <section id="offerings">
   <div class="s-inner">
-    <!-- Pebble SVG background -->
-    <svg class="pebble-bg" viewBox="0 0 200 250" style="position:absolute;right:0;bottom:0;width:250px;opacity:.05;pointer-events:none">
-      <ellipse cx="60" cy="200" rx="50" ry="35" fill="var(--forest-warm)"/>
-      <ellipse cx="120" cy="185" rx="35" ry="28" fill="var(--ocean-mist)"/>
-      <ellipse cx="90" cy="165" rx="25" ry="20" fill="var(--autumn-sand)"/>
-      <ellipse cx="140" cy="160" rx="20" ry="16" fill="var(--forest-warm)"/>
-      <ellipse cx="60" cy="155" rx="15" ry="12" fill="var(--ocean-mist)"/>
-    </svg>
     <div class="off-intro reveal">
       <div class="s-label">What I Offer</div>
       <h2>Three pathways to <em>collective flourishing</em></h2>
@@ -722,19 +773,19 @@ footer a{color:var(--ocean-mist);text-decoration:none}
         <div class="off-num">01</div>
         <h3>Leadership Capacity to Build Capacity</h3>
         <p>The most sustainable change comes from within. I develop the leadership skills, facilitation competencies, and relational intelligence that enable your people to host meaningful dialogue and build self-organising cultures — long after our time together ends.</p>
-        <p style="margin-top:.8rem;font-size:.8rem;opacity:.5;font-style:italic">For: Executive teams, facilitation corps, L&amp;D, community leadership programmes</p>
+        <p style="margin-top:.8rem; font-size:.8rem; opacity:.5; font-style:italic;">For: Executive teams, facilitation corps, L&D, community leadership programmes</p>
       </div>
       <div class="off-card reveal" style="transition-delay:.16s">
         <div class="off-num">02</div>
-        <h3>Organisational Innovation &amp; Strategy</h3>
+        <h3>Organisational Innovation & Strategy</h3>
         <p>Visions written in boardrooms rarely live in the hearts of those asked to carry them out. I co-design and co-develop organisational futures — strategies, structures, and frameworks — with the full intelligence of your people, creating strategies that are genuinely owned.</p>
-        <p style="margin-top:.8rem;font-size:.8rem;opacity:.5;font-style:italic">For: NGOs, social enterprises, corporates seeking adaptive strategies</p>
+        <p style="margin-top:.8rem; font-size:.8rem; opacity:.5; font-style:italic;">For: NGOs, social enterprises, corporates seeking adaptive strategies</p>
       </div>
       <div class="off-card reveal" style="transition-delay:.24s">
         <div class="off-num">03</div>
-        <h3>System Change &amp; Sector Transformation</h3>
+        <h3>System Change & Sector Transformation</h3>
         <p>The most urgent challenges of our time cannot be solved by any single organisation. I facilitate multi-stakeholder convergences that launch co-created initiatives, align sectors, and build the collective capacity needed to shift entire systems toward social-ecological renewal.</p>
-        <p style="margin-top:.8rem;font-size:.8rem;opacity:.5;font-style:italic">For: Alliances, funders, sector networks, territorial development initiatives</p>
+        <p style="margin-top:.8rem; font-size:.8rem; opacity:.5; font-style:italic;">For: Alliances, funders, sector networks, territorial development initiatives</p>
       </div>
     </div>
   </div>
@@ -752,23 +803,23 @@ footer a{color:var(--ocean-mist);text-decoration:none}
         <div class="method-group-title">Strategic Process Design &amp; Hosting</div>
         <div class="pills">
           <a href="https://www.presencing.org/aboutus/theory-u" target="_blank" class="pill p-ocean">Theory U</a>
-          <a href="https://www.artofhosting.org/the-work/methods/chaordic-stepping-stones/" target="_blank" class="pill p-forest">Chaordic Stepping Stones</a>
-          <a href="https://www.openspaceworld.org" target="_blank" class="pill p-ocean">Open Space Technology</a>
-          <a href="https://theworldcafe.com" target="_blank" class="pill p-warm">World Café</a>
+          <a href="https://www.chaordic.org" target="_blank" class="pill p-forest">Chaordic Stepping Stones</a>
+          <a href="http://www.openspaceworld.org" target="_blank" class="pill p-ocean">Open Space Technology</a>
+          <a href="http://www.theworldcafe.com" target="_blank" class="pill p-warm">World Café</a>
           <a href="https://appreciativeinquiry.champlain.edu" target="_blank" class="pill p-forest">Appreciative Inquiry</a>
-          <a href="https://www.artofhosting.org/the-work/methods/proaction-cafe/" target="_blank" class="pill p-warm">Pro-action Café</a>
+          <a href="https://www.artofhosting.org" target="_blank" class="pill p-warm">Pro-action Café</a>
           <a href="https://www.flowgame.net" target="_blank" class="pill p-ocean">Flow Game</a>
-          <a href="https://www.artofhosting.org/the-work/methods/" target="_blank" class="pill p-forest">Oasis Game</a>
-          <a href="https://www.artofhosting.org" target="_blank" class="pill p-warm">Designing for Wiser Action</a>
+          <a href="https://www.artofhosting.org" target="_blank" class="pill p-forest">Oasis Game</a>
+          <span class="pill p-warm">Designing for Wiser Action</span>
         </div>
       </div>
       <div class="method-group reveal" style="transition-delay:.15s">
         <div class="method-group-title">Strategic Visualization &amp; Harvesting</div>
         <div class="pills">
-          <a href="https://www.ifvp.org/what-is-graphic-facilitation" target="_blank" class="pill p-autumn">Graphic Facilitation</a>
+          <a href="https://www.ifvp.org" target="_blank" class="pill p-autumn">Graphic Facilitation</a>
           <a href="https://www.ifvp.org" target="_blank" class="pill p-autumn">Graphic Recording</a>
           <span class="pill p-warm">Graphic Template Design</span>
-          <a href="https://www.artofhosting.org/the-work/harvesting/" target="_blank" class="pill p-forest">Collective Harvesting</a>
+          <a href="https://www.artofhosting.org" target="_blank" class="pill p-forest">Collective Harvesting</a>
         </div>
       </div>
       <div class="method-group reveal" style="transition-delay:.25s">
@@ -801,11 +852,46 @@ footer a{color:var(--ocean-mist);text-decoration:none}
       <h2>Moments of <em>transformation</em> across the world</h2>
     </div>
     <div class="work-list">
-      <div class="work-item reveal" style="transition-delay:.03s"><div class="work-year">2024</div><div class="work-body"><h3>Oxfam Novib — FAIR for ALL Africa</h3><p>Facilitated a global convergence of country directors to reflect on the Fair for All movement and chart its strategic future across Africa and South America.</p></div><div class="work-tag">Oxfam · Global</div></div>
-      <div class="work-item reveal" style="transition-delay:.06s"><div class="work-year">2024</div><div class="work-body"><h3>Ecoversities Alliance — Global Gathering, Brazil</h3><p>Co-designed a global gathering in São Paulo and Cunha, centring holistic living, Amazon protection, and the empowerment of women and marginalised communities.</p></div><div class="work-tag">Ecoversities · Brazil</div></div>
-      <div class="work-item reveal" style="transition-delay:.09s"><div class="work-year">2024</div><div class="work-body"><h3>Alliance for Food Sovereignty in Africa</h3><p>Facilitated the co-creation of AFSA's strategic plan engaging smallholder farmers, advocates, and institutional leaders.</p></div><div class="work-tag">AFSA · Pan-African</div></div>
-      <div class="work-item reveal" style="transition-delay:.12s"><div class="work-year">2021–2023</div><div class="work-body"><h3>Magamba Network — Strategic Alignment</h3><p>Led a multi-year strategic alignment process, embedding participatory practices into the organisation's culture and strengthening advocacy.</p></div><div class="work-tag">Magamba · Zimbabwe</div></div>
-      <div class="work-item reveal" style="transition-delay:.15s"><div class="work-year">2017–2018</div><div class="work-body"><h3>National Citizen Convention — Zimbabwe</h3><p>Convened 3,000+ Zimbabwean citizens across two landmark national gatherings. Featured Kofi Annan and the Elders.</p></div><div class="work-tag">National · Zimbabwe</div></div>
+      <div class="work-item reveal" style="transition-delay:.03s">
+        <div class="work-year">2024</div>
+        <div class="work-body">
+          <h3>Oxfam Novib — FAIR for ALL Africa</h3>
+          <p>Facilitated a global convergence of country directors and senior leaders to reflect on the Fair for All movement and chart its strategic future across Africa and South America.</p>
+        </div>
+        <div class="work-tag">Oxfam Novib · Global</div>
+      </div>
+      <div class="work-item reveal" style="transition-delay:.06s">
+        <div class="work-year">2024</div>
+        <div class="work-body">
+          <h3>Ecoversities Alliance — Global Gathering, Brazil</h3>
+          <p>Co-designed and co-hosted a global gathering in São Paulo and Cunha, centring holistic living, Amazon protection, and the empowerment of women and marginalised communities.</p>
+        </div>
+        <div class="work-tag">Ecoversities · Brazil</div>
+      </div>
+      <div class="work-item reveal" style="transition-delay:.09s">
+        <div class="work-year">2024</div>
+        <div class="work-body">
+          <h3>Alliance for Food Sovereignty in Africa (AFSA)</h3>
+          <p>Facilitated the co-creation of AFSA's strategic plan using participatory methodologies, engaging smallholder farmers, advocates, and institutional leaders.</p>
+        </div>
+        <div class="work-tag">AFSA · Pan-African</div>
+      </div>
+      <div class="work-item reveal" style="transition-delay:.12s">
+        <div class="work-year">2021–2023</div>
+        <div class="work-body">
+          <h3>Magamba Network — Strategic Alignment</h3>
+          <p>Led a multi-year strategic alignment process, embedding participatory practices into the organisation's culture and strengthening advocacy across the region.</p>
+        </div>
+        <div class="work-tag">Magamba · Zimbabwe</div>
+      </div>
+      <div class="work-item reveal" style="transition-delay:.15s">
+        <div class="work-year">2017–2018</div>
+        <div class="work-body">
+          <h3>National Citizen Convention — Zimbabwe</h3>
+          <p>Convened 3,000+ Zimbabwean citizens across two landmark national gatherings in collective dreaming and democratic imagination. Featured Kofi Annan and the Elders.</p>
+        </div>
+        <div class="work-tag">National · Zimbabwe</div>
+      </div>
     </div>
   </div>
 </section>
@@ -819,104 +905,110 @@ footer a{color:var(--ocean-mist);text-decoration:none}
       <p>These are not just books — they are companions, teachers, and mirrors. Each one lives in my work, in the questions I ask, and in the spaces I hold. I share them as an invitation to enter the same conversations that changed me.</p>
     </div>
 
+    <!-- MEG WHEATLEY -->
     <div class="books-author-group reveal" style="transition-delay:.05s">
       <div class="books-author-name">Margaret Wheatley</div>
-      <div class="books-author-bio">Pioneer of new-paradigm leadership — exploring how life organises itself with surprising grace and what that means for our organisations and communities.</div>
+      <div class="books-author-bio">Pioneer of new-paradigm leadership, exploring how life organises itself with surprising grace — and what that means for our organisations and communities.</div>
       <div class="books-row">
-        <a href="https://margaretwheatley.com/books-products/books/leadership-and-the-new-science/" target="_blank" class="book-card">
+        <a href="https://www.amazon.com/s?k=margaret+wheatley+leadership+new+science" target="_blank" class="book-card">
           <div class="book-cover ocean"><span class="book-title-text">Leadership and the New Science</span></div>
-          <div class="book-meta"><span class="book-title">Leadership and the New Science</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Leadership and the New Science</span><span class="book-btn">Find Book →</span></div>
         </a>
-        <a href="https://margaretwheatley.com/books-products/books/turning-to-one-another/" target="_blank" class="book-card">
+        <a href="https://www.amazon.com/s?k=turning+to+one+another+wheatley" target="_blank" class="book-card">
           <div class="book-cover forest"><span class="book-title-text">Turning to One Another</span></div>
-          <div class="book-meta"><span class="book-title">Turning to One Another</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Turning to One Another</span><span class="book-btn">Find Book →</span></div>
         </a>
-        <a href="https://margaretwheatley.com/books-products/books/who-do-we-choose-to-be/" target="_blank" class="book-card">
+        <a href="https://www.amazon.com/s?k=who+do+we+choose+to+be+wheatley" target="_blank" class="book-card">
           <div class="book-cover mixed"><span class="book-title-text">Who Do We Choose to Be?</span></div>
-          <div class="book-meta"><span class="book-title">Who Do We Choose to Be?</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Who Do We Choose to Be?</span><span class="book-btn">Find Book →</span></div>
         </a>
-        <a href="https://margaretwheatley.com/books-products/books/so-far-from-home/" target="_blank" class="book-card">
+        <a href="https://www.amazon.com/s?k=so+far+from+home+wheatley" target="_blank" class="book-card">
           <div class="book-cover ocean"><span class="book-title-text">So Far from Home</span></div>
-          <div class="book-meta"><span class="book-title">So Far from Home</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">So Far from Home</span><span class="book-btn">Find Book →</span></div>
         </a>
       </div>
     </div>
 
+    <!-- CHARLES EISENSTEIN -->
     <div class="books-author-group reveal" style="transition-delay:.1s">
       <div class="books-author-name">Charles Eisenstein</div>
-      <div class="books-author-bio">Visionary philosopher of "the more beautiful world our hearts know is possible" — weaving ecology, economics, and the sacred.</div>
+      <div class="books-author-bio">Visionary philosopher of the "more beautiful world our hearts know is possible" — weaving together ecology, economics, and the sacred.</div>
       <div class="books-row">
         <a href="https://charleseisenstein.org/books/sacred-economics/" target="_blank" class="book-card">
           <div class="book-cover autumn"><span class="book-title-text">Sacred Economics</span></div>
-          <div class="book-meta"><span class="book-title">Sacred Economics</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Sacred Economics</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://charleseisenstein.org/books/more-beautiful-world/" target="_blank" class="book-card">
-          <div class="book-cover forest"><span class="book-title-text">The More Beautiful World...</span></div>
-          <div class="book-meta"><span class="book-title">The More Beautiful World...</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-cover forest"><span class="book-title-text">The More Beautiful World Our Hearts Know Is Possible</span></div>
+          <div class="book-meta"><span class="book-title">The More Beautiful World...</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://charleseisenstein.org/books/climate-a-new-story/" target="_blank" class="book-card">
           <div class="book-cover ocean"><span class="book-title-text">Climate: A New Story</span></div>
-          <div class="book-meta"><span class="book-title">Climate: A New Story</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Climate: A New Story</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://charleseisenstein.org/books/ascent-of-humanity/" target="_blank" class="book-card">
           <div class="book-cover mixed"><span class="book-title-text">The Ascent of Humanity</span></div>
-          <div class="book-meta"><span class="book-title">The Ascent of Humanity</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">The Ascent of Humanity</span><span class="book-btn">Find Book →</span></div>
         </a>
       </div>
     </div>
 
+    <!-- ORLAND BISHOP -->
     <div class="books-author-group reveal" style="transition-delay:.15s">
       <div class="books-author-name">Orland Bishop</div>
-      <div class="books-author-bio">Mentor, activist, and philosopher bridging the sacred and the social — showing how genuine witness can heal communities and awaken collective capacity.</div>
+      <div class="books-author-bio">Mentor, activist, and philosopher whose work bridges the sacred and the social — showing how mentorship and genuine witness can heal communities.</div>
       <div class="books-row">
-        <a href="https://orlandbishop.com" target="_blank" class="book-card">
-          <div class="book-cover autumn"><span class="book-title-text">The Seventh Power</span></div>
-          <div class="book-meta"><span class="book-title">The Seventh Power</span><span class="book-btn">Author's Site →</span></div>
+        <a href="https://www.amazon.com/s?k=orland+bishop+book" target="_blank" class="book-card">
+          <div class="book-cover autumn"><span class="book-title-text">The Seventh Power: One CEO's Journey into the Business of Shared Leadership</span></div>
+          <div class="book-meta"><span class="book-title">The Seventh Power</span><span class="book-btn">Find Book →</span></div>
         </a>
-        <a href="https://orlandbishop.com" target="_blank" class="book-card">
-          <div class="book-cover forest"><span class="book-title-text">Talks &amp; Conversations</span></div>
-          <div class="book-meta"><span class="book-title">Talks &amp; Conversations</span><span class="book-btn">Explore Work →</span></div>
+        <a href="https://www.youtube.com/results?search_query=orland+bishop+talks" target="_blank" class="book-card">
+          <div class="book-cover forest"><span class="book-title-text">Orland Bishop Talks & Conversations</span></div>
+          <div class="book-meta"><span class="book-title">Talks & Conversations</span><span class="book-btn">Watch Talks →</span></div>
         </a>
       </div>
     </div>
 
+    <!-- OTTO SCHARMER -->
     <div class="books-author-group reveal" style="transition-delay:.2s">
       <div class="books-author-name">Otto Scharmer</div>
-      <div class="books-author-bio">Creator of Theory U — exploring how we access deeper sources of knowing to navigate profound change and lead from the emerging future.</div>
+      <div class="books-author-bio">Creator of Theory U and the Presencing Institute — exploring how we access deeper sources of knowing to navigate profound change.</div>
       <div class="books-row">
         <a href="https://www.presencing.org/resource/books" target="_blank" class="book-card">
-          <div class="book-cover ocean"><span class="book-title-text">Theory U</span></div>
-          <div class="book-meta"><span class="book-title">Theory U</span><span class="book-btn">Presencing.org →</span></div>
+          <div class="book-cover ocean"><span class="book-title-text">Theory U: Leading from the Future as It Emerges</span></div>
+          <div class="book-meta"><span class="book-title">Theory U</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://www.presencing.org/resource/books" target="_blank" class="book-card">
           <div class="book-cover mixed"><span class="book-title-text">The Essentials of Theory U</span></div>
-          <div class="book-meta"><span class="book-title">Essentials of Theory U</span><span class="book-btn">Presencing.org →</span></div>
+          <div class="book-meta"><span class="book-title">The Essentials of Theory U</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://www.presencing.org/resource/books" target="_blank" class="book-card">
           <div class="book-cover forest"><span class="book-title-text">Leading from the Emerging Future</span></div>
-          <div class="book-meta"><span class="book-title">Leading from the Emerging Future</span><span class="book-btn">Presencing.org →</span></div>
+          <div class="book-meta"><span class="book-title">Leading from the Emerging Future</span><span class="book-btn">Find Book →</span></div>
         </a>
       </div>
     </div>
 
+    <!-- ECKHART TOLLE -->
     <div class="books-author-group reveal" style="transition-delay:.25s">
       <div class="books-author-name">Eckhart Tolle</div>
-      <div class="books-author-bio">Teacher of presence and stillness — reminding us that the quality of our consciousness is the foundation of everything we create in the world.</div>
+      <div class="books-author-bio">Teacher of presence and stillness — whose work reminds us that the quality of our consciousness is the foundation of everything we create in the world.</div>
       <div class="books-row">
         <a href="https://eckharttolle.com/the-power-of-now-book/" target="_blank" class="book-card">
           <div class="book-cover autumn"><span class="book-title-text">The Power of Now</span></div>
-          <div class="book-meta"><span class="book-title">The Power of Now</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">The Power of Now</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://eckharttolle.com/a-new-earth-book/" target="_blank" class="book-card">
-          <div class="book-cover ocean"><span class="book-title-text">A New Earth</span></div>
-          <div class="book-meta"><span class="book-title">A New Earth</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-cover ocean"><span class="book-title-text">A New Earth: Awakening Your Life's Purpose</span></div>
+          <div class="book-meta"><span class="book-title">A New Earth</span><span class="book-btn">Find Book →</span></div>
         </a>
         <a href="https://eckharttolle.com/stillness-speaks-book/" target="_blank" class="book-card">
           <div class="book-cover forest"><span class="book-title-text">Stillness Speaks</span></div>
-          <div class="book-meta"><span class="book-title">Stillness Speaks</span><span class="book-btn">Author's Site →</span></div>
+          <div class="book-meta"><span class="book-title">Stillness Speaks</span><span class="book-btn">Find Book →</span></div>
         </a>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -935,53 +1027,9 @@ footer a{color:var(--ocean-mist);text-decoration:none}
       </div>
       <div class="comm-card reveal" style="transition-delay:.2s">
         <h3>Flow Game Host</h3>
-        <p>I am a certified Flow Game host — a profound and playful process that creates the conditions for deep insight, authentic connection, and personal clarity. The Flow Game invites groups and individuals into a contemplative yet energising journey of collective sensing and inner knowing. Particularly powerful for leadership retreats, community sensing, and moments of important transition.</p>
+        <p>I am a certified Flow Game host — a profound and playful process that creates conditions for deep insight, authentic connection, and personal clarity. The Flow Game invites groups and individuals into a contemplative yet energising journey of collective sensing and inner knowing. Particularly powerful for leadership retreats, community sensing, and moments of important transition.</p>
         <a href="https://www.flowgame.net" target="_blank" class="comm-link">Visit flowgame.net →</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ BLOG ═══ -->
-<section id="blog">
-  <div class="s-inner">
-    <div class="blog-intro reveal">
-      <div class="s-label">Reflections &amp; Writings</div>
-      <h2>Words from the <em>field</em></h2>
-      <p>This is a space for slow thinking, honest reflection, and the questions that refuse to leave me. I write from the field — from the circles, gatherings, and quiet moments between them.</p>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-card reveal" style="transition-delay:.05s">
-        <span class="blog-category cat-ocean">Facilitation</span>
-        <div class="blog-date">Coming Soon</div>
-        <h3>What the circle teaches that the table cannot</h3>
-        <p>There is something about sitting in a circle — no head, no foot — that changes what becomes possible. Reflections on the geometry of dialogue.</p>
-        <a href="#blog" class="blog-read">Read when published →</a>
-      </div>
-      <div class="blog-card reveal" style="transition-delay:.1s">
-        <span class="blog-category cat-forest">Leadership</span>
-        <div class="blog-date">Coming Soon</div>
-        <h3>On the difference between holding space and filling it</h3>
-        <p>The most powerful thing a facilitator can do is often nothing at all. A meditation on restraint, presence, and the discipline of silence.</p>
-        <a href="#blog" class="blog-read">Read when published →</a>
-      </div>
-      <div class="blog-card reveal" style="transition-delay:.15s">
-        <span class="blog-category cat-pride">Queerness &amp; Leadership</span>
-        <div class="blog-date">Coming Soon</div>
-        <h3>What queerness taught me about facilitating</h3>
-        <p>Living outside the norm teaches you to question every assumption about what a room should look like, who should speak first, and who belongs at the centre.</p>
-        <a href="#blog" class="blog-read">Read when published →</a>
-      </div>
-      <div class="blog-card reveal" style="transition-delay:.2s">
-        <span class="blog-category cat-forest">Meraki</span>
-        <div class="blog-date">Coming Soon</div>
-        <h3>Why I named my practice after a Greek word for devotion</h3>
-        <p>On what it means to bring your whole self to work that matters — without losing yourself in it.</p>
-        <a href="#blog" class="blog-read">Read when published →</a>
-      </div>
-    </div>
-    <div class="coming-soon-banner reveal" style="transition-delay:.3s">
-      ✦ &nbsp; All writings will be published here soon. Subscribe by emailing <a href="mailto:Irvine.muzuva@gmail.com" style="color:var(--ocean-deep)">Irvine.muzuva@gmail.com</a> &nbsp; ✦
     </div>
   </div>
 </section>
@@ -997,202 +1045,142 @@ footer a{color:var(--ocean-mist);text-decoration:none}
 <section id="contact">
   <div class="contact-inner">
     <div class="s-label reveal" style="justify-content:center">Begin Here</div>
-    <h2 class="reveal" style="transition-delay:.05s;text-align:center">Every <em>transformation</em> begins<br>with a single conversation</h2>
-    <p class="contact-p reveal" style="transition-delay:.1s">Whether you are planning a strategic retreat, seeking a skilled facilitator, or simply sensing that something needs to shift — I would love to hear from you.</p>
-    <div class="contact-grid reveal" style="transition-delay:.2s">
-      <a href="mailto:Irvine.muzuva@gmail.com" class="c-chip"><span>✉</span> Irvine.muzuva@gmail.com</a>
-      <a href="tel:+263774729321" class="c-chip"><span>☎</span> +263 774 729 321</a>
-      <a href="https://www.linkedin.com/in/irvine-muzuva-1964665b/" target="_blank" class="c-chip"><span>in</span> LinkedIn Profile</a>
-      <a href="#blog" class="c-chip"><span>✍</span> Subscribe to Blog</a>
+    <h2 class="reveal" style="transition-delay:.05s; text-align:center">
+      Every <em>transformation</em> begins<br>with a single conversation
+    </h2>
+    <p class="contact-p reveal" style="transition-delay:.1s">
+      Whether you are planning a strategic retreat, seeking a skilled facilitator, or simply sensing that something needs to shift — reach out. I would love to hear from you.
+    </p>
+
+    <!-- Success message (shown after submit) -->
+    <div id="form-success" class="reveal" style="transition-delay:.15s">
+      <div class="success-icon">🌿</div>
+      <h3>Thank you for reaching out</h3>
+      <p>I have received your message and will be in touch soon. In the meantime, feel free to connect on LinkedIn.</p>
     </div>
+
+    <!-- Contact Form — powered by Formspree (free) -->
+    <form class="contact-form reveal"
+          id="contact-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          style="transition-delay:.15s">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Irvine Muzuva" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="org">Organisation (optional)</label>
+          <input type="text" id="org" name="organisation" placeholder="NGO, Company, Community...">
+        </div>
+        <div class="form-group">
+          <label for="interest">I am interested in</label>
+          <select id="interest" name="interest">
+            <option value="" disabled selected>Select one...</option>
+            <option value="Leadership Capacity Building">Leadership Capacity Building</option>
+            <option value="Organisational Innovation & Strategy">Organisational Innovation &amp; Strategy</option>
+            <option value="System Change & Facilitation">System Change &amp; Facilitation</option>
+            <option value="Graphic Recording">Graphic Recording</option>
+            <option value="Speaking / Training">Speaking / Training</option>
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your context, your challenge, or simply what feels alive for you right now..." required></textarea>
+        </div>
+      </div>
+
+      <!-- Hidden field to identify source -->
+      <input type="hidden" name="_subject" value="New message from Meraki Leadership website">
+      <input type="hidden" name="_next" value="">
+
+      <button type="submit" class="form-submit">Send Message →</button>
+      <p class="form-note">Your message goes directly to Irvine's inbox. No spam, no sharing.</p>
+    </form>
+
+    <a href="https://www.linkedin.com/in/irvine-muzuva-1964665b/" target="_blank" class="form-linkedin reveal" style="transition-delay:.3s">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect on LinkedIn
+    </a>
   </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <span>© 2024 Meraki Leadership · Irvine Muzuva · Zimbabwe</span>
-  <span>Participatory Leadership · Facilitation · System Change</span>
+  <span>© 2024 Meraki Leadership · Irvine Muzuva</span>
+  <span>Participatory Leadership · Facilitation · System Change · Harare, Zimbabwe</span>
   <span>
     <a href="https://www.artofhosting.org" target="_blank">Art of Hosting</a> &nbsp;·&nbsp;
     <a href="https://www.flowgame.net" target="_blank">Flow Game</a>
   </span>
 </footer>
 
-<!-- ═══ JAVASCRIPT ═══ -->
 <script>
-// ── CURSOR ──
-const cur=document.getElementById('cur'),ring=document.getElementById('curR');
+// Cursor
+const cur = document.getElementById('cur');
+const ring = document.getElementById('curR');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
-(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();
-document.querySelectorAll('a,button,.pill,.serve-card,.off-card,.blog-card,.book-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.width='52px';ring.style.height='52px';ring.style.borderColor='var(--autumn-light)'});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='var(--forest-soft)'});
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function a(){
+  rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(a);
+})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.width='54px';ring.style.height='54px';});
+  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='34px';ring.style.height='34px';});
 });
 
-// ── SCROLL REVEAL ──
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+// Scroll reveal
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
 },{threshold:0.1});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>obs.observe(el));
-
-// ── COUNTING NUMBERS ──
-function countUp(el){
-  const target=+el.dataset.target;
-  const suffix=target>=1000?'+':'+'
-  const duration=1600;
-  const start=performance.now();
-  function update(now){
-    const progress=Math.min((now-start)/duration,1);
-    const ease=1-Math.pow(1-progress,3);
-    const val=Math.floor(ease*target);
-    el.textContent=(target>=1000?val.toLocaleString():val)+suffix;
-    if(progress<1)requestAnimationFrame(update);
-  }
-  requestAnimationFrame(update);
-}
-const numObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.counted){e.target.dataset.counted=1;countUp(e.target)}});
-},{threshold:0.5});
-document.querySelectorAll('.stat-num[data-target]').forEach(el=>numObs.observe(el));
-
-// ── ANIMATED HEADLINE LETTERS ──
-document.querySelectorAll('.animated-headline').forEach(h=>{
-  h.innerHTML=h.innerHTML.replace(/([A-Za-zÀ-ÖØ-öø-ÿ])/g,'<span class="letter" style="animation-delay:'+Math.random()*.5+'s">$1</span>');
-});
-
-// ── GRAPHIC RECORDING DRAW ANIMATION ──
-const grObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      document.querySelectorAll('.draw-path').forEach((p,i)=>{
-        setTimeout(()=>{p.style.strokeDasharray='2000';p.style.strokeDashoffset='2000';p.style.transition='stroke-dashoffset 0.8s ease';p.style.strokeDashoffset='0'},i*80);
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// ── CONTACT FORM ──
+const form = document.getElementById('contact-form');
+const success = document.getElementById('form-success');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
       });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.classList.add('visible');
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
     }
   });
-},{threshold:0.3});
-const grSvg=document.getElementById('gr-svg');
-if(grSvg)grObs.observe(grSvg);
-
-// ── AMBIENT SOUND ──
-const btn=document.getElementById('sound-btn');
-let ctx,isPlaying=false,buffers=[],nodes=[];
-
-async function createAmbience(){
-  if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
-  // Forest ambience using oscillators and noise (no external files needed)
-  // Layer 1: low frequency rumble (wind)
-  const wind=ctx.createOscillator();
-  const windGain=ctx.createGain();
-  const windFilter=ctx.createBiquadFilter();
-  wind.type='sawtooth';
-  wind.frequency.setValueAtTime(80,ctx.currentTime);
-  wind.frequency.linearRampToValueAtTime(120,ctx.currentTime+8);
-  wind.frequency.linearRampToValueAtTime(70,ctx.currentTime+16);
-  windFilter.type='lowpass';
-  windFilter.frequency.value=200;
-  windGain.gain.setValueAtTime(0,ctx.currentTime);
-  windGain.gain.linearRampToValueAtTime(0.015,ctx.currentTime+2);
-  wind.connect(windFilter);
-  windFilter.connect(windGain);
-  windGain.connect(ctx.destination);
-  wind.start();
-  nodes.push(wind,windGain,windFilter);
-
-  // Layer 2: bird-like tones (random chirps)
-  function chirp(){
-    if(!isPlaying)return;
-    const osc=ctx.createOscillator();
-    const g=ctx.createGain();
-    osc.type='sine';
-    const freq=800+Math.random()*1200;
-    osc.frequency.setValueAtTime(freq,ctx.currentTime);
-    osc.frequency.linearRampToValueAtTime(freq*1.3,ctx.currentTime+0.1);
-    g.gain.setValueAtTime(0,ctx.currentTime);
-    g.gain.linearRampToValueAtTime(0.04,ctx.currentTime+0.05);
-    g.gain.linearRampToValueAtTime(0,ctx.currentTime+0.3);
-    osc.connect(g);g.connect(ctx.destination);
-    osc.start();osc.stop(ctx.currentTime+0.35);
-    setTimeout(chirp,1500+Math.random()*3000);
-  }
-  setTimeout(chirp,500);
-
-  // Layer 3: water/stream using noise + bandpass
-  const bufLen=ctx.sampleRate*2;
-  const buffer=ctx.createBuffer(1,bufLen,ctx.sampleRate);
-  const data=buffer.getChannelData(0);
-  for(let i=0;i<bufLen;i++)data[i]=(Math.random()*2-1);
-  const noise=ctx.createBufferSource();
-  noise.buffer=buffer;
-  noise.loop=true;
-  const bpf=ctx.createBiquadFilter();
-  bpf.type='bandpass';
-  bpf.frequency.value=400;
-  bpf.Q.value=0.5;
-  const noiseGain=ctx.createGain();
-  noiseGain.gain.setValueAtTime(0,ctx.currentTime);
-  noiseGain.gain.linearRampToValueAtTime(0.03,ctx.currentTime+3);
-  noise.connect(bpf);bpf.connect(noiseGain);noiseGain.connect(ctx.destination);
-  noise.start();
-  nodes.push(noise,bpf,noiseGain);
 }
-
-function stopAmbience(){
-  nodes.forEach(n=>{try{if(n.stop)n.stop();n.disconnect()}catch(e){}});
-  nodes=[];
-  if(ctx){ctx.close();ctx=null;}
-}
-
-btn.addEventListener('click',async()=>{
-  if(!isPlaying){
-    isPlaying=true;
-    btn.textContent='🔊';
-    btn.classList.add('playing');
-    await createAmbience();
-  } else {
-    isPlaying=false;
-    btn.textContent='🌿';
-    btn.classList.remove('playing');
-    stopAmbience();
-  }
-});
-
-// ── PARALLAX on scroll ──
-window.addEventListener('scroll',()=>{
-  const y=window.scrollY;
-  document.querySelectorAll('.shape').forEach((s,i)=>{
-    s.style.transform=`translate(${i*5}px, ${y*(0.08+i*0.03)}px) scale(1)`;
-  });
-});
-
-// ── MOUSE TRAIL ──
-const trail=[];
-for(let i=0;i<8;i++){
-  const t=document.createElement('div');
-  t.style.cssText=`position:fixed;width:${4-i*0.4}px;height:${4-i*0.4}px;border-radius:50%;background:var(--autumn-light);pointer-events:none;z-index:9990;transform:translate(-50%,-50%);opacity:${0.6-i*0.07};transition:left ${0.05+i*0.03}s,top ${0.05+i*0.03}s`;
-  document.body.appendChild(t);
-  trail.push({el:t,x:0,y:0});
-}
-document.addEventListener('mousemove',e=>{
-  trail[0].x=e.clientX;trail[0].y=e.clientY;
-  trail[0].el.style.left=e.clientX+'px';trail[0].el.style.top=e.clientY+'px';
-});
-(function animTrail(){
-  for(let i=1;i<trail.length;i++){
-    trail[i].x+=(trail[i-1].x-trail[i].x)*.35;
-    trail[i].y+=(trail[i-1].y-trail[i].y)*.35;
-    trail[i].el.style.left=trail[i].x+'px';
-    trail[i].el.style.top=trail[i].y+'px';
-  }
-  requestAnimationFrame(animTrail);
-})();
-
-// ── WORD HIGHLIGHT on hover ──
-document.querySelectorAll('h2 em, h1 em').forEach(el=>{
-  el.style.transition='letter-spacing .3s';
-  el.addEventListener('mouseenter',()=>el.style.letterSpacing='.04em');
-  el.addEventListener('mouseleave',()=>el.style.letterSpacing='');
-});
 </script>
 </body>
 </html>
