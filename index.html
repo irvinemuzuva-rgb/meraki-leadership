@@ -405,6 +405,12 @@ h2 em { font-style:italic; color:var(--ocean-deep); }
   transition:transform .3s;
 }
 .book-card:hover { transform:translateY(-6px); }
+
+/* Book cover inner design */
+.bc-spine{position:absolute;left:0;top:0;bottom:0;width:10px;opacity:.5}
+.bc-body{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:1rem .6rem;text-align:center}
+.bc-title{font-family:'Cormorant Garamond',serif;font-size:.7rem;font-weight:600;color:var(--cream);line-height:1.35;margin-bottom:.4rem;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.bc-author{font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .book-cover {
   width:140px; height:200px;
   border-radius:3px;
@@ -1006,33 +1012,66 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
     <div class="books-intro reveal">
       <div class="s-label">A Living Library</div>
       <h2>Books that <em>shaped</em> my practice</h2>
-      <p>These are not just books — they are companions, teachers, and mirrors. Each one lives in my work, in the questions I ask, and in the spaces I hold. I share them as an invitation to enter the same conversations that changed me.</p>
+      <p>These are not just books — they are companions, teachers, and mirrors. Each one lives in my work, in the questions I ask, and in the spaces I hold. Click any book to learn more.</p>
     </div>
 
     <!-- Popup overlay -->
     <div class="book-popup-overlay" id="bookOverlay"></div>
 
-    <!-- MEG WHEATLEY -->
+    <!-- MARGARET WHEATLEY -->
     <div class="books-author-group reveal" style="transition-delay:.05s">
       <div class="books-author-name">Margaret Wheatley</div>
       <div class="books-author-bio">Pioneer of new-paradigm leadership, exploring how life organises itself with surprising grace — and what that means for our organisations and communities.</div>
       <div class="books-row">
+
         <div class="book-card" onclick="openBook('Leadership and the New Science','Margaret Wheatley','A revolutionary guide applying quantum physics, chaos theory, and biology to organisations and leadership. Wheatley shows that life seeks order, uses messes to get there, and that relationships — not structures — are what truly matter. One of the top ten business books of all time.')">
-          <div class="book-cover w1"><img src="https://covers.openlibrary.org/b/isbn/1576753441-L.jpg" alt="Leadership and the New Science" onerror="this.style.display='none'"><span class="book-title-text">Leadership and the New Science</span></div>
-          <div class="book-meta"><span class="book-title">Leadership and the New Science</span><span class="book-click-hint">Click to learn more</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a3a5c,#2d6a8a);font-size:.65rem">
+            <div class="bc-spine" style="background:#1a2d45"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="border:1px solid rgba(255,255,255,.2);border-radius:50%;width:50px;height:50px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem">🌀</div>
+              <div class="bc-title">Leadership and the New Science</div>
+              <div class="bc-author">Wheatley</div>
+            </div>
+          </div>
+          <div class="book-meta"><span class="book-title">Leadership &amp; the New Science</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('Turning to One Another','Margaret Wheatley','A gentle and powerful invitation to reclaim the human practice of conversation. Wheatley argues that simple, honest conversation is the most powerful tool we have to restore hope and change the world — one circle at a time.')">
-          <div class="book-cover w2"><img src="https://covers.openlibrary.org/b/isbn/1576751457-L.jpg" alt="Turning to One Another" onerror="this.style.display='none'"><span class="book-title-text">Turning to One Another</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#2d4a1a,#4a7a2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#223813"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🤝</div>
+              <div class="bc-title">Turning to One Another</div>
+              <div class="bc-author">Wheatley</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Turning to One Another</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('Who Do We Choose to Be?','Margaret Wheatley','Written for leaders navigating collapse and chaos, this book asks the most important question of our time: who do we choose to be, even when we cannot fix the world? A call to lead with integrity, compassion, and presence — no matter what.')">
-          <div class="book-cover w3"><img src="https://covers.openlibrary.org/b/isbn/1626566143-L.jpg" alt="Who Do We Choose to Be?" onerror="this.style.display='none'"><span class="book-title-text">Who Do We Choose to Be?</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#5c1a1a,#8a2d2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#3d1010"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🧭</div>
+              <div class="bc-title">Who Do We Choose to Be?</div>
+              <div class="bc-author">Wheatley</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Who Do We Choose to Be?</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('So Far from Home','Margaret Wheatley','A deeply honest exploration of what it means to work for change in a world that resists it. Wheatley writes about losing the belief that our efforts will fix things — and finding the deeper motivation to continue anyway, with love.')">
-          <div class="book-cover w4"><img src="https://covers.openlibrary.org/b/isbn/1609945263-L.jpg" alt="So Far from Home" onerror="this.style.display='none'"><span class="book-title-text">So Far from Home</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a2a4a,#2d3d6a);font-size:.65rem">
+            <div class="bc-spine" style="background:#111d33"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌙</div>
+              <div class="bc-title">So Far from Home</div>
+              <div class="bc-author">Wheatley</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">So Far from Home</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1041,22 +1080,55 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
       <div class="books-author-name">Charles Eisenstein</div>
       <div class="books-author-bio">Visionary philosopher of "the more beautiful world our hearts know is possible" — weaving together ecology, economics, and the sacred.</div>
       <div class="books-row">
+
         <div class="book-card" onclick="openBook('Sacred Economics','Charles Eisenstein','A profound reimagining of money, gift, and community. Eisenstein traces the history of money and its role in separating us from each other and the earth — and offers a vision of an economy rooted in gift, reciprocity, and ecological sanity.')">
-          <div class="book-cover e1"><img src="https://covers.openlibrary.org/b/isbn/1583943846-L.jpg" alt="Sacred Economics" onerror="this.style.display='none'"><span class="book-title-text">Sacred Economics</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#2a4a1a,#4a7a30);font-size:.65rem">
+            <div class="bc-spine" style="background:#1e3512"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌱</div>
+              <div class="bc-title">Sacred Economics</div>
+              <div class="bc-author">Eisenstein</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Sacred Economics</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('The More Beautiful World Our Hearts Know Is Possible','Charles Eisenstein','A luminous call to believe again — in community, in generosity, in the possibility of a world built on interbeing rather than separation. Essential reading for anyone who has felt the tension between cynicism and hope.')">
-          <div class="book-cover e2"><img src="https://covers.openlibrary.org/b/isbn/1623170478-L.jpg" alt="The More Beautiful World" onerror="this.style.display='none'"><span class="book-title-text">The More Beautiful World...</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a4a3a,#2d7a5a);font-size:.65rem">
+            <div class="bc-spine" style="background:#113327"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">✨</div>
+              <div class="bc-title">The More Beautiful World...</div>
+              <div class="bc-author">Eisenstein</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">The More Beautiful World...</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('Climate: A New Story','Charles Eisenstein','Eisenstein argues that the climate crisis is a symptom of a deeper story of separation from nature. He invites us to fall back in love with the earth — not out of fear, but out of grief and wonder — as the foundation of genuine ecological healing.')">
-          <div class="book-cover e3"><img src="https://covers.openlibrary.org/b/isbn/1623172497-L.jpg" alt="Climate: A New Story" onerror="this.style.display='none'"><span class="book-title-text">Climate: A New Story</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a3a5c,#2d5a8a);font-size:.65rem">
+            <div class="bc-spine" style="background:#122440"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌊</div>
+              <div class="bc-title">Climate: A New Story</div>
+              <div class="bc-author">Eisenstein</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Climate: A New Story</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('The Ascent of Humanity','Charles Eisenstein','A sweeping exploration of how civilisation arrived at its current crisis — through the progressive separation of self from nature, community, and the sacred. Dense, brilliant, and transformative.')">
-          <div class="book-cover e4"><img src="https://covers.openlibrary.org/b/isbn/1583947952-L.jpg" alt="The Ascent of Humanity" onerror="this.style.display='none'"><span class="book-title-text">The Ascent of Humanity</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#3a2a1a,#6a4a2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#261a0e"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌍</div>
+              <div class="bc-title">The Ascent of Humanity</div>
+              <div class="bc-author">Eisenstein</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">The Ascent of Humanity</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1065,10 +1137,19 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
       <div class="books-author-name">Orland Bishop</div>
       <div class="books-author-bio">Mentor, activist, and philosopher whose work bridges the sacred and the social — showing how genuine witness and mentorship can heal communities and awaken collective capacity.</div>
       <div class="books-row">
+
         <div class="book-card" onclick="openBook('The Seventh Power','Orland Bishop','Bishop explores mentorship as a sacred act — arguing that true power emerges not from control but from the capacity to see and call forth the potential in another human being. A profound guide to leadership rooted in witness, love, and ancestral wisdom.')">
-          <div class="book-cover b1"><img src="https://covers.openlibrary.org/b/isbn/1523085975-L.jpg" alt="The Seventh Power" onerror="this.style.display='none'"><span class="book-title-text">The Seventh Power</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a1a3a,#2d2d6a);font-size:.65rem">
+            <div class="bc-spine" style="background:#111126"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">⚡</div>
+              <div class="bc-title">The Seventh Power</div>
+              <div class="bc-author">Bishop</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">The Seventh Power</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1077,18 +1158,43 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
       <div class="books-author-name">Otto Scharmer</div>
       <div class="books-author-bio">Creator of Theory U and the Presencing Institute — exploring how we access deeper sources of knowing to navigate profound change and lead from the emerging future.</div>
       <div class="books-row">
-        <div class="book-card" onclick="openBook('Theory U: Leading from the Future as It Emerges','Otto Scharmer','The foundational text of Theory U — a framework for leading profound change by accessing the deepest source of knowledge: presence. Scharmer describes how to move from ego-system to eco-system awareness, from downloading to presencing.')">
-          <div class="book-cover s1"><img src="https://covers.openlibrary.org/b/isbn/1576757641-L.jpg" alt="Theory U" onerror="this.style.display='none'"><span class="book-title-text">Theory U</span></div>
+
+        <div class="book-card" onclick="openBook('Theory U','Otto Scharmer','The foundational text of Theory U — a framework for leading profound change by accessing the deepest source of knowledge: presence. Scharmer describes how to move from ego-system to eco-system awareness, from downloading to presencing.')">
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a3a4a,#2d6a7a);font-size:.65rem">
+            <div class="bc-spine" style="background:#112533"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px;letter-spacing:-.05em;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600">U</div>
+              <div class="bc-title">Theory U</div>
+              <div class="bc-author">Scharmer</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Theory U</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('The Essentials of Theory U','Otto Scharmer','A concise and accessible introduction to Theory U — covering the core concepts of presencing, blind spot awareness, and leading from the emerging future. Ideal for practitioners and change leaders entering this work for the first time.')">
-          <div class="book-cover s2"><img src="https://covers.openlibrary.org/b/isbn/1523094680-L.jpg" alt="The Essentials of Theory U" onerror="this.style.display='none'"><span class="book-title-text">The Essentials of Theory U</span></div>
-          <div class="book-meta"><span class="book-title">The Essentials of Theory U</span><span class="book-click-hint">Click to learn more</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#2a3a1a,#4a6a2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#1c2711"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🔑</div>
+              <div class="bc-title">The Essentials of Theory U</div>
+              <div class="bc-author">Scharmer</div>
+            </div>
+          </div>
+          <div class="book-meta"><span class="book-title">Essentials of Theory U</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('Leading from the Emerging Future','Otto Scharmer &amp; Katrin Kaufer','Scharmer and Kaufer diagnose the root causes of our collective failures — in economics, democracy, and sustainability — and offer a framework for transforming institutions from ego-system to eco-system awareness. Visionary and practical.')">
-          <div class="book-cover s3"><img src="https://covers.openlibrary.org/b/isbn/1605099260-L.jpg" alt="Leading from the Emerging Future" onerror="this.style.display='none'"><span class="book-title-text">Leading from the Emerging Future</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#3a1a1a,#6a2d2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#261010"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌅</div>
+              <div class="bc-title">Leading from the Emerging Future</div>
+              <div class="bc-author">Scharmer</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Leading from the Emerging Future</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1097,18 +1203,43 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
       <div class="books-author-name">Eckhart Tolle</div>
       <div class="books-author-bio">Teacher of presence and stillness — reminding us that the quality of our consciousness is the foundation of everything we create in the world.</div>
       <div class="books-row">
-        <div class="book-card" onclick="openBook('The Power of Now','Eckhart Tolle','A guide to spiritual enlightenment through the practice of present-moment awareness. Tolle shows how the mind&#39;s addiction to past and future creates suffering — and how presence is both the path and the destination. Transformative for facilitators and leaders.')">
-          <div class="book-cover t1"><img src="https://covers.openlibrary.org/b/isbn/1577314808-L.jpg" alt="The Power of Now" onerror="this.style.display='none'"><span class="book-title-text">The Power of Now</span></div>
+
+        <div class="book-card" onclick="openBook('The Power of Now','Eckhart Tolle','A guide to spiritual enlightenment through the practice of present-moment awareness. Tolle shows how the mind\'s addiction to past and future creates suffering — and how presence is both the path and the destination. Transformative for facilitators and leaders.')">
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a3a2a,#2d6a4a);font-size:.65rem">
+            <div class="bc-spine" style="background:#11261b"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">☀️</div>
+              <div class="bc-title">The Power of Now</div>
+              <div class="bc-author">Tolle</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">The Power of Now</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('A New Earth','Eckhart Tolle','Tolle expands on The Power of Now to explore how ego — individual and collective — creates suffering and dysfunction. He offers a vision of humanity awakening to a new consciousness rooted in presence, purpose, and inner peace.')">
-          <div class="book-cover t2"><img src="https://covers.openlibrary.org/b/isbn/0452289963-L.jpg" alt="A New Earth" onerror="this.style.display='none'"><span class="book-title-text">A New Earth</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#2a3a4a,#4a5a7a);font-size:.65rem">
+            <div class="bc-spine" style="background:#1c2733"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌏</div>
+              <div class="bc-title">A New Earth</div>
+              <div class="bc-author">Tolle</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">A New Earth</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
         <div class="book-card" onclick="openBook('Stillness Speaks','Eckhart Tolle','A collection of short, luminous teachings on the nature of stillness — written to be read slowly, one paragraph at a time. Perfect for facilitators who hold space for others and need to tend their own inner ground.')">
-          <div class="book-cover t3"><img src="https://covers.openlibrary.org/b/isbn/1577314696-L.jpg" alt="Stillness Speaks" onerror="this.style.display='none'"><span class="book-title-text">Stillness Speaks</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#4a3a1a,#7a5a2d);font-size:.65rem">
+            <div class="bc-spine" style="background:#322711"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🌿</div>
+              <div class="bc-title">Stillness Speaks</div>
+              <div class="bc-author">Tolle</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Stillness Speaks</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1117,10 +1248,19 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
       <div class="books-author-name">Dr. Khameer Kidia</div>
       <div class="books-author-bio">Physician, anthropologist and Rhodes Scholar at Harvard Medical School and the University of Zimbabwe — bringing a radical, compassionate voice to global mental health from a Zimbabwean perspective.</div>
       <div class="books-row">
+
         <div class="book-card" onclick="openBook('Empire of Madness: Reimagining Western Mental Health Care for Everyone','Dr. Khameer Kidia','An urgent rethinking of the Western approach to mental health, which treats symptoms rather than the exploitative systems causing distress. Born in Zimbabwe, Kidia asks: what if the solution to our mental health crisis is not more psychiatry, but more justice? Drawing on fieldwork across Zimbabwe and the US, he argues that what we diagnose as individual illness is often a rational response to colonialism, racism, and structural violence. A vital, compassionate, and revolutionary book.')">
-          <div class="book-cover k1"><img src="https://covers.openlibrary.org/b/isbn/0593594282-L.jpg" alt="Empire of Madness" onerror="this.style.display='none'"><span class="book-title-text">Empire of Madness</span></div>
+          <div class="book-cover" style="background:linear-gradient(160deg,#1a0505,#4a0a0a);font-size:.65rem">
+            <div class="bc-spine" style="background:#0e0202"></div>
+            <div class="bc-body">
+              <div class="bc-art" style="font-size:1.5rem;margin-bottom:8px">🧠</div>
+              <div class="bc-title">Empire of Madness</div>
+              <div class="bc-author">Dr. Kidia</div>
+            </div>
+          </div>
           <div class="book-meta"><span class="book-title">Empire of Madness</span><span class="book-click-hint">Click to learn more</span></div>
         </div>
+
       </div>
     </div>
 
@@ -1275,6 +1415,10 @@ const obs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── BOOK POPUPS ──
+function openBook(title, author, desc) {
+
 // ── BOOK POPUPS ──
 function openBook(title, author, desc) {
   document.getElementById('popupTitle').textContent = title;
