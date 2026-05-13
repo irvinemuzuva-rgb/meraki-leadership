@@ -550,6 +550,11 @@ h2 em { font-style:italic; color:var(--ocean-deep); }
 }
 .comm-card:hover { background:rgba(246,243,236,.12); transform:translateY(-4px); }
 .comm-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:600; color:var(--autumn-sand); margin-bottom:.8rem; }
+.comm-tag {
+  font-size:.58rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ocean-mist); font-weight:500;
+  margin-bottom:.5rem; opacity:.7;
+}
 .comm-card p { font-size:.9rem; line-height:1.85; color:rgba(246,243,236,.82); margin-bottom:1.4rem; }
 .comm-link {
   display:inline-flex; align-items:center; gap:.5rem;
@@ -703,7 +708,111 @@ footer a { color:var(--ocean-mist); text-decoration:none; }
 .reveal { opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
-/* ── SCROLL PROGRESS BAR ── */
+/* ── WORKING WITH ME ── */
+#working-with-me { background: var(--parchment); }
+
+.wwm-intro { max-width: 640px; margin-bottom: 4rem; }
+.wwm-sub {
+  font-size: 1rem; line-height: 1.9;
+  color: var(--forest-mid); margin-top: 1rem;
+}
+
+.wwm-steps {
+  max-width: 720px;
+  display: flex; flex-direction: column;
+  gap: 0;
+}
+
+.wwm-step {
+  display: grid;
+  grid-template-columns: 52px 2px 1fr;
+  gap: 0 1.8rem;
+  align-items: start;
+  padding-bottom: 2.8rem;
+}
+.wwm-step:last-child { padding-bottom: 0; }
+
+.wwm-numeral {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300;
+  color: var(--ocean-deep);
+  letter-spacing: .08em;
+  padding-top: .1rem;
+  text-align: right;
+  line-height: 1;
+}
+
+.wwm-line {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ocean-mid), var(--autumn-mid));
+  align-self: stretch;
+  margin-top: .4rem;
+  border-radius: 2px;
+  position: relative;
+}
+.wwm-line::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--ocean-deep);
+  box-shadow: 0 0 0 3px rgba(26,92,92,.15);
+}
+.wwm-line-last {
+  background: linear-gradient(to bottom, var(--ocean-mid), transparent);
+}
+
+.wwm-body { padding-top: 0; padding-bottom: .5rem; }
+
+.wwm-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 600;
+  color: var(--forest-deep);
+  margin-bottom: .2rem;
+  line-height: 1.2;
+}
+
+.wwm-step-sub {
+  font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--autumn-mid); font-weight: 500;
+  margin-bottom: .6rem; opacity: .85;
+}
+
+.wwm-desc {
+  font-size: .95rem; line-height: 1.9;
+  color: var(--forest-mid);
+}
+
+.wwm-closing {
+  max-width: 640px;
+  margin-top: 4.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(47,50,29,.12);
+  text-align: center;
+}
+
+.wwm-closing-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 300;
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  line-height: 1.55;
+  color: var(--forest-deep);
+  margin-bottom: 1rem;
+}
+
+.wwm-closing-attr {
+  font-size: .72rem; letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--autumn-mid); opacity: .8;
+}
+
+@media(max-width:960px) {
+  .wwm-step { grid-template-columns: 40px 2px 1fr; gap: 0 1.2rem; }
+  .wwm-numeral { font-size: 1.1rem; }
+}
 #scroll-bar {
   position:fixed; top:0; left:0; height:2.5px; width:0%;
   background:linear-gradient(to right, var(--ocean-deep), var(--autumn-mid), var(--ocean-light));
@@ -836,6 +945,7 @@ h2 em, h1 em {
     <li><a href="#offerings">Offerings</a></li>
     <li><a href="#books">Library</a></li>
     <li><a href="#community">Community</a></li>
+    <li><a href="#working-with-me">Process</a></li>
     <li><a href="#contact">Connect</a></li>
   </ul>
 </nav>
@@ -1219,19 +1329,110 @@ h2 em, h1 em {
     <div class="reveal">
       <div class="s-label">Communities of Practice</div>
       <h2>Rooted in living <em>traditions</em> of collective wisdom</h2>
+      <p style="max-width:640px;margin-top:1rem;font-size:1rem;line-height:1.9;color:rgba(246,243,236,.82)">My practice does not exist in isolation. It is nourished by remarkable communities of practitioners, thinkers, and changemakers — people who believe that how we gather matters as much as what we gather for.</p>
     </div>
-    <div class="comm-grid">
-      <div class="comm-card reveal" style="transition-delay:.1s">
-        <h3>Art of Hosting Community</h3>
-        <p>I am a proud practitioner within the global Art of Hosting community — an international network dedicated to participatory leadership and hosting meaningful conversations that matter. The Art of Hosting weaves together some of the most powerful conversational practices available today, grounded in decades of collective learning across cultures and continents.</p>
-        <a href="https://www.artofhosting.org" target="_blank" class="comm-link">Visit artofhosting.org →</a>
+    <div class="comm-grid" style="grid-template-columns:repeat(2,1fr)">
+
+      <div class="comm-card reveal" style="transition-delay:.08s">
+        <div class="comm-tag">Practitioner</div>
+        <h3>Art of Hosting</h3>
+        <p>A global community dedicated to participatory leadership and hosting meaningful conversations that matter. The Art of Hosting weaves together some of the most powerful conversational practices available today, grounded in decades of collective learning across cultures and continents.</p>
+        <a href="https://www.artofhosting.org" target="_blank" class="comm-link">artofhosting.org →</a>
       </div>
+
+      <div class="comm-card reveal" style="transition-delay:.14s">
+        <div class="comm-tag">Certified Host</div>
+        <h3>Flow Game</h3>
+        <p>A profound and playful process that creates conditions for deep insight, authentic connection, and personal clarity. The Flow Game invites groups and individuals into a contemplative yet energising journey of collective sensing and inner knowing — powerful for leadership retreats, community sensing, and moments of important transition.</p>
+        <a href="https://www.flowgame.net" target="_blank" class="comm-link">flowgame.net →</a>
+      </div>
+
       <div class="comm-card reveal" style="transition-delay:.2s">
-        <h3>Flow Game Host</h3>
-        <p>I am a certified Flow Game host — a profound and playful process that creates conditions for deep insight, authentic connection, and personal clarity. The Flow Game invites groups and individuals into a contemplative yet energising journey of collective sensing and inner knowing. Particularly powerful for leadership retreats, community sensing, and moments of important transition.</p>
-        <a href="https://www.flowgame.net" target="_blank" class="comm-link">Visit flowgame.net →</a>
+        <div class="comm-tag">Facilitator &amp; Coordinator</div>
+        <h3>Kufunda Village</h3>
+        <p>Kufunda is a learning village in Zimbabwe — a living experiment in community, wholeness, and regenerative ways of being together. I am deeply involved in processes, coordination, facilitation, and the ongoing work of holding this extraordinary space. Kufunda is not just a community I work with — it is a home for my practice.</p>
+        <a href="https://www.kufunda.org" target="_blank" class="comm-link">kufunda.org →</a>
       </div>
+
+      <div class="comm-card reveal" style="transition-delay:.26s">
+        <div class="comm-tag">Alliance Member</div>
+        <h3>Ecoversities Alliance</h3>
+        <p>A global alliance of learning places that are reimagining education from the roots up — centred on ecology, community, and the recovery of diverse ways of knowing. I am part of this living network of educators, activists, and knowledge-holders working to create learning that truly serves life.</p>
+        <a href="https://ecoversities.org" target="_blank" class="comm-link">ecoversities.org →</a>
+      </div>
+
+      <div class="comm-card reveal" style="transition-delay:.32s; grid-column:1/-1">
+        <div class="comm-tag">Alumni Warrior — GSA 26</div>
+        <h3>Warriors Without Weapons</h3>
+        <p>I am a proud alumnus of the Warrior from the Warriors Without Weapons programme — a transformative leadership experience that brings together young people from across the world to develop the inner and outer capacities needed to build a more just and peaceful world. Being part of GSA 26 is one of the most formative experiences of my life — a crucible of courage, solidarity, and purpose that continues to shape everything I do.</p>
+        <a href="https://programagsa.org/en" target="_blank" class="comm-link">programagsa.org →</a>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- ═══ WORKING WITH ME ═══ -->
+<section id="working-with-me">
+  <div class="s-inner">
+    <div class="wwm-intro reveal">
+      <div class="s-label">How We Work Together</div>
+      <h2>Not a blueprint. <em>A living process.</em></h2>
+      <p class="wwm-sub">Every engagement begins with listening — not gathering a brief, but understanding a whole. From there, everything is designed with intention, held with care, and harvested for meaning.</p>
+    </div>
+
+    <div class="wwm-steps">
+
+      <div class="wwm-step reveal" style="transition-delay:.06s">
+        <div class="wwm-numeral">I</div>
+        <div class="wwm-line"></div>
+        <div class="wwm-body">
+          <div class="wwm-title">Deep Listening</div>
+          <div class="wwm-step-sub">Understanding the whole</div>
+          <div class="wwm-desc">Before anything is designed, we enter your world together. This is not a discovery call or a needs assessment. It is a genuine conversation about your context, your people, your purpose — and what is really being asked beneath what is being said.</div>
+        </div>
+      </div>
+
+      <div class="wwm-step reveal" style="transition-delay:.12s">
+        <div class="wwm-numeral">II</div>
+        <div class="wwm-line"></div>
+        <div class="wwm-body">
+          <div class="wwm-title">The Central Question</div>
+          <div class="wwm-step-sub">Finding the compass</div>
+          <div class="wwm-desc">From all that is heard and sensed, one question emerges — the deeper question at the heart of your situation. This becomes the compass. Everything that follows is oriented around it.</div>
+        </div>
+      </div>
+
+      <div class="wwm-step reveal" style="transition-delay:.18s">
+        <div class="wwm-numeral">III</div>
+        <div class="wwm-line"></div>
+        <div class="wwm-body">
+          <div class="wwm-title">Designing the Container</div>
+          <div class="wwm-step-sub">A process made for you</div>
+          <div class="wwm-desc">With the question held, a tailor-made process is designed for your specific situation — whether that is a strategic planning session, a team experience, a learning journey, or a co-creation space. Nothing off the shelf. Everything intentional. Once we agree, we move forward together.</div>
+        </div>
+      </div>
+
+      <div class="wwm-step reveal" style="transition-delay:.24s">
+        <div class="wwm-numeral">IV</div>
+        <div class="wwm-line wwm-line-last"></div>
+        <div class="wwm-body">
+          <div class="wwm-title">Holding &amp; Harvesting</div>
+          <div class="wwm-step-sub">Presence and meaning-making</div>
+          <div class="wwm-desc">The space is held with full presence. The process is facilitated. And then the work is harvested — what emerged is captured, made visible, and given back to your group in a form they can carry forward.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wwm-closing reveal" style="transition-delay:.35s">
+      <div class="wwm-closing-quote">
+        "I do not arrive with answers.<br>I arrive with the conditions for your own wisdom to surface."
+      </div>
+      <div class="wwm-closing-attr">— Irvine Muzuva</div>
+      <a href="#contact" class="btn-earth" style="margin-top:2rem;display:inline-block">Begin a Conversation</a>
+    </div>
+
   </div>
 </section>
 
